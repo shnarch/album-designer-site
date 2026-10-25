@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Album Designer</title>
+<meta name="description" content="Design a printed photo album in an evening. Album Designer arranges your photos into stories and pages with Claude's help, and every detail stays yours to change.">
+<meta property="og:title" content="Album Designer">
+<meta property="og:description" content="Design a printed photo album in an evening, with Claude's help. Your photos stay on your computer.">
+<meta property="og:image" content="assets/icon-512.png">
+<link rel="icon" type="image/png" href="assets/icon-128.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top"><img src="assets/icon-128.png" alt="" width="28" height="28"> Album Designer <span class="ver-badge" data-version>beta</span></a>
+    <nav aria-label="Sections">
+      <a href="#watch" data-i18n="nav_watch">Watch</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="#guides" data-i18n="nav_guides">Guides</a>
+      <a href="#videos" data-i18n="nav_videos">Videos</a>
+      <a href="#feedback" data-i18n="nav_feedback">Feedback</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="he" aria-pressed="false">עברית</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero wrap" id="watch">
+  <div class="hero-text">
+    <p class="eyebrow" data-i18n="hero_eyebrow">Beta for Windows</p>
+    <h1 data-i18n="hero_h1">Design a printed photo album in an evening</h1>
+    <p class="lead" data-i18n="hero_lead">Album Designer arranges your photos into stories and pages with Claude's help, and every detail stays yours to change. Your photos stay on your computer.</p>
+    <div class="cta">
+      <a class="btn primary" href="#download" data-dl-windows><span data-i18n="btn_download_win">Download for Windows</span> <small data-version-short></small></a>
+      <span class="btn disabled" aria-disabled="true" data-i18n="btn_mac_soon">Mac: coming soon</span>
+    </div>
+    <p class="fine" data-i18n="hero_fine">Free during the beta. Claude's part costs a few cents per album, paid to Anthropic with your own key.</p>
+  </div>
+  <div class="video ph" role="img" aria-label="Promo video placeholder">
+    <span class="play" aria-hidden="true">▶</span>
+    <span data-i18n="video_soon">Promo video coming soon</span>
+  </div>
+</section>
+
+<section class="wrap how">
+  <article><b>1</b><h3 data-i18n="how1_h">Add your photos</h3><p data-i18n="how1_p">Drag in your JPEGs, or publish them from Lightroom Classic. Claude starts reading them as they arrive.</p></article>
+  <article><b>2</b><h3 data-i18n="how2_h">Lay out the album</h3><p data-i18n="how2_p">Your groups become stories, and every story gets pages designed spread by spread.</p></article>
+  <article><b>3</b><h3 data-i18n="how3_h">Make it yours, then print</h3><p data-i18n="how3_p">Move, crop and write anything by hand, ask Claude for changes, then export a proof or print-ready files.</p></article>
+</section>
+
+<section class="wrap" id="download">
+  <h2 data-i18n="dl_h">Download and install</h2>
+  <div class="dl-card">
+    <div>
+      <p class="dl-version"><b data-i18n="dl_current">Current version</b> <span class="vnum" data-version>…</span> <small data-released></small></p>
+      <p class="fine" data-i18n="dl_req">Windows 10 or 11. PDF export uses Edge or Chrome, which Windows already has.</p>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-windows data-i18n="btn_download_win2">Download for Windows</a>
+      <span class="btn disabled" aria-disabled="true" data-i18n="btn_mac_soon2">Mac: coming soon</span>
+    </div>
+  </div>
+
+  <ol class="steps">
+    <li>
+      <div class="ph shot" role="img" aria-label="Screenshot placeholder"><span data-i18n="shot">Screenshot</span></div>
+      <h3 data-i18n="s1_h">1. Run the installer</h3>
+      <p data-i18n-html="s1_p">Open the file you downloaded. Windows may show a blue box, <b>"Windows protected your PC"</b>. During the beta the installer isn't signed yet, so click <b>More info</b>, then <b>Run anyway</b>. Then click Next until it finishes.</p>
+    </li>
+    <li>
+      <div class="ph shot" role="img" aria-label="Screenshot placeholder"><span data-i18n="shot">Screenshot</span></div>
+      <h3 data-i18n="s2_h">2. Connect Claude</h3>
+      <p data-i18n-html="s2_p">Album Designer opens in your browser. Open <b>Settings › App</b>, paste your Claude key into <b>Anthropic API key</b> and save. Layouts work without a key, but reading photos and the chat need one.</p>
+    </li>
+    <li>
+      <div class="ph shot" role="img" aria-label="Screenshot placeholder"><span data-i18n="shot">Screenshot</span></div>
+      <h3 data-i18n="s3_h">3. Add photos</h3>
+      <p data-i18n-html="s3_p">Drag your photos into the window. Next time, open Album Designer from the Start menu. To close it, right-click its icon by the clock and choose <b>Quit</b>.</p>
+    </li>
+  </ol>
+
+  <details class="key">
+    <summary data-i18n="key_h">How do I get a Claude key?</summary>
+    <p data-i18n-html="key_p">Sign in at <a href="https://console.anthropic.com" rel="noopener">console.anthropic.com</a>, add a few dollars under <b>Billing</b>, then open <b>API keys › Create key</b> and copy it. A whole album of 100 photos costs a few cents to about a dollar, depending on the model you choose in Settings. Keep the key private: it is like a password for your Claude account's credit.</p>
+  </details>
+
+  <div class="notes">
+    <h3 data-i18n="notes_h">What's new</h3>
+    <ul data-notes><li>…</li></ul>
+    <p class="fine"><a href="https://github.com/shnarch/album-designer-site/releases" data-i18n="notes_all">All versions</a></p>
+  </div>
+
+  <div class="mac-note fine"><b data-i18n="mac_h">Mac:</b> <span data-i18n-html="mac_p">the installer is on its way. It will need one extra step the first time: open <b>System Settings › Privacy &amp; Security</b> and click <b>Open Anyway</b>.</span></div>
+</section>
+
+<section class="wrap" id="guides">
+  <h2 data-i18n="g_h">Two ways to work</h2>
+  <div class="personas" role="tablist" aria-label="Guide">
+    <button type="button" role="tab" id="tab-quick" aria-selected="true" aria-controls="guide-quick" data-persona="quick">
+      <span class="tag" data-i18n="p_quick_tag">Quick album</span>
+      <b data-i18n="p_quick_h">Just give me an album</b>
+      <span data-i18n="p_quick_p">Drop your photos, press one button, flip through options, export.</span>
+    </button>
+    <button type="button" role="tab" id="tab-pro" aria-selected="false" aria-controls="guide-pro" data-persona="pro">
+      <span class="tag pro" data-i18n="p_pro_tag">Professional design</span>
+      <b data-i18n="p_pro_h">Every spread my way</b>
+      <span data-i18n="p_pro_p">Lightroom, stories, alternatives, hand layout, print files for Blurb.</span>
+    </button>
+  </div>
+
+  <div class="guide" id="guide-quick" role="tabpanel" aria-labelledby="tab-quick">
+    <ol class="gsteps">
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="q1_h">1. Add photos</h3><p data-i18n="q1_p">Drag your JPEGs into the window, or use Upload photos. Claude starts reading them right away.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="q2_h">2. Check the groups</h3><p data-i18n="q2_p">In Arrange, photos are grouped by day. Click between two photos to split a group, or use Merge to join two. Rename a group by clicking its name.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="q3_h">3. Lay out album</h3><p data-i18n="q3_p">One button turns your groups into stories and designs every page. Stories you already designed are left alone.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="q4_h">4. Try other designs</h3><p data-i18n="q4_p">Press the arrows beside a page, a spread or a story to see other designs. Ctrl+Z steps back.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="q5_h">5. Export</h3><p data-i18n="q5_p">Export a proof PDF to look through, or print-ready files for Blurb.</p></li>
+    </ol>
+    <p class="vsoon"><span class="ph vid">▶</span> <span data-i18n="guide_video_soon">Video guide: coming soon</span></p>
+  </div>
+
+  <div class="guide" id="guide-pro" role="tabpanel" aria-labelledby="tab-pro" hidden>
+    <ol class="gsteps">
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r1_h">1. Publish from Lightroom</h3><p data-i18n="r1_p">The plugin turns Lightroom collections into stories and marks published photos "in album". Edit in Lightroom and republish: the pages keep up.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r2_h">2. Arrange and mark</h3><p data-i18n="r2_p">Tag heroes, favorites and maybes. Mark alternatives and let the sharper one win, or keep photos together on one page.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r3_h">3. Design spread by spread</h3><p data-i18n="r3_p">The spread is the canvas: move, resize and crop anywhere, even across the fold. Warnings show soft prints and cut-off faces.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r4_h">4. Lock what is finished</h3><p data-i18n="r4_p">AI lock a spread and redesigns, Lay out album and Claude all leave it exactly as it is.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r5_h">5. Text and cover</h3><p data-i18n="r5_p">Text boxes with Hebrew and right-to-left support, and a cover designer.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r6_h">6. Ask Claude</h3><p data-i18n="r6_p">"Make the lake photo bigger on page 5." Claude changes the album through the same tools you use, and respects your locks.</p></li>
+      <li><div class="ph shot"><span data-i18n="shot">Screenshot</span></div><h3 data-i18n="r7_h">7. Proof and print</h3><p data-i18n="r7_p">Send a shareable proof and import the comments, then export Blurb-ready files with bleed and safe zones.</p></li>
+    </ol>
+    <p class="vsoon"><span class="ph vid">▶</span> <span data-i18n="guide_video_soon">Video guide: coming soon</span></p>
+  </div>
+</section>
+
+<section class="wrap" id="videos">
+  <h2 data-i18n="v_h">Video library</h2>
+  <p class="lead small" data-i18n="v_lead">Short how-to videos, added as they are made.</p>
+  <div class="filters" id="vfilters" role="group" aria-label="Video categories"></div>
+  <div class="vgrid" id="vgrid"></div>
+</section>
+
+<section class="wrap" id="feedback">
+  <h2 data-i18n="f_h">Tell us what you think</h2>
+  <p class="lead small" data-i18n="f_lead">Found a bug, want a feature, or stuck on something? Write it here. It reaches the developer directly.</p>
+  <form id="fb" class="fb" novalidate>
+    <fieldset class="types">
+      <legend class="sr" data-i18n="f_type">What is it?</legend>
+      <label><input type="radio" name="type" value="bug" checked> <span data-i18n="f_bug">Something is broken</span></label>
+      <label><input type="radio" name="type" value="feature"> <span data-i18n="f_feat">An idea</span></label>
+      <label><input type="radio" name="type" value="question"> <span data-i18n="f_q">A question</span></label>
+    </fieldset>
+    <label class="fld"><span data-i18n="f_msg">What happened, or what would help?</span>
+      <textarea name="message" rows="6" maxlength="4000" required placeholder="" data-i18n-ph="f_msg_ph"></textarea></label>
+    <label class="fld"><span data-i18n="f_mail">Your email (optional, only so we can reply)</span>
+      <input type="email" name="email" autocomplete="email" maxlength="200"></label>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div id="ts"></div>
+    <div class="fb-row">
+      <button class="btn primary" type="submit" data-i18n="f_send">Send</button>
+      <span id="fb-status" role="status"></span>
+    </div>
+    <p class="fine" data-i18n="f_fine">Please don't send passwords or your Claude key. The page's version and language are added to help us reproduce problems.</p>
+  </form>
+</section>
+
+<section class="wrap" id="faq">
+  <h2 data-i18n="faq_h">Questions</h2>
+  <details><summary data-i18n="faq1_q">Do I need Lightroom?</summary><p data-i18n="faq1_a">No. Drag in JPEGs. The Lightroom plugin is for photographers who edit there and want the album to follow their changes.</p></details>
+  <details><summary data-i18n="faq2_q">Where do my photos go?</summary><p data-i18n="faq2_a">Albums are stored on your computer, in Documents › Album Designer. When you add a Claude key, small copies of your photos are sent to Anthropic so Claude can read them. Nothing else leaves your computer.</p></details>
+  <details><summary data-i18n="faq3_q">What does Claude cost?</summary><p data-i18n="faq3_a">You pay Anthropic directly for what you use, with your own key. Reading 100 photos costs about three cents with the default model. The app shows an estimate of what you have spent.</p></details>
+  <details><summary data-i18n="faq4_q">Is it safe to click "Run anyway"?</summary><p data-i18n="faq4_a">Windows warns about every app that isn't signed with a paid certificate. During the beta the installer isn't signed. Download it only from this page.</p></details>
+  <details><summary data-i18n="faq5_q">Which printers and sizes?</summary><p data-i18n="faq5_a">The default is Blurb's Large Square. You can set any page size and margins, and the proof PDF works with any printer.</p></details>
+  <details><summary data-i18n="faq6_q">Does it work in Hebrew?</summary><p data-i18n="faq6_a">Yes: right-to-left albums, Hebrew text and fonts, and Claude writes titles in Hebrew for those albums.</p></details>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p data-i18n="foot_privacy">Privacy: this website collects nothing about you except what you type into the feedback box. The app checks this site once a day for a newer version number and sends nothing about you.</p>
+    <p class="fine" data-i18n="foot_marks">Album Designer is an independent project. Blurb and Adobe Lightroom are trademarks of their owners.</p>
+    <p class="fine"><span data-version>beta</span> · <a href="https://github.com/shnarch/album-designer-site/releases" data-i18n="notes_all2">All versions</a></p>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

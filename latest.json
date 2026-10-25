@@ -1,0 +1,11 @@
+{
+ "version": "0.1.0",
+ "released": "2026-10-25",
+ "windows": "https://github.com/shnarch/album-designer-site/releases/latest",
+ "mac": null,
+ "notes": [
+  "First beta: design a printed photo album with Claude's help, for Windows",
+  "Arrange photos into stories, lay out the album in one click, edit every page by hand",
+  "Export a proof PDF or Blurb-ready print files"
+ ]
+}

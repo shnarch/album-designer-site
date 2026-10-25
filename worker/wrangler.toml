@@ -1,0 +1,12 @@
+name = "album-designer-feedback"
+main = "index.js"
+compatibility_date = "2024-11-01"
+
+[vars]
+GITHUB_REPO = "shnarch/album-designer"
+ALLOWED_ORIGINS = "https://shnarch.github.io"
+
+# Optional (see README): a KV namespace to limit each visitor to 5 messages an hour.
+# [[kv_namespaces]]
+# binding = "RATE"
+# id = "<the id wrangler prints when you create it>"

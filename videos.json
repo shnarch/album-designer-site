@@ -1,0 +1,22 @@
+[
+  {"id": "first-album", "category": "Getting started", "persona": "quick", "youtube": null,
+   "title": {"en": "Your first album in 10 minutes", "he": "האלבום הראשון שלכם ב-10 דקות"}},
+  {"id": "install-claude-key", "category": "Getting started", "persona": "quick", "youtube": null,
+   "title": {"en": "Install and connect Claude", "he": "התקנה וחיבור ל-Claude"}},
+  {"id": "arrange-groups", "category": "Arrange", "persona": "quick", "youtube": null,
+   "title": {"en": "Groups and stories in Arrange", "he": "קבוצות וסיפורים בסידור"}},
+  {"id": "duplicates-alternatives", "category": "Arrange", "persona": "pro", "youtube": null,
+   "title": {"en": "Duplicates and alternatives", "he": "כפילויות ותמונות חלופיות"}},
+  {"id": "design-spreads", "category": "Design", "persona": "pro", "youtube": null,
+   "title": {"en": "Designing spreads by hand", "he": "עיצוב ספרדים ביד"}},
+  {"id": "ai-lock", "category": "Design", "persona": "pro", "youtube": null,
+   "title": {"en": "AI lock: keep what's finished", "he": "נעילה ל-AI: משאירים מה שהסתיים"}},
+  {"id": "hebrew-rtl", "category": "Design", "persona": "pro", "youtube": null,
+   "title": {"en": "Hebrew albums (right to left)", "he": "אלבומים בעברית (מימין לשמאל)"}},
+  {"id": "lightroom", "category": "Lightroom", "persona": "pro", "youtube": null,
+   "title": {"en": "Publish from Lightroom Classic", "he": "פרסום מ-Lightroom Classic"}},
+  {"id": "export-blurb", "category": "Export", "persona": "pro", "youtube": null,
+   "title": {"en": "Export print files for Blurb", "he": "ייצוא קבצים להדפסה ב-Blurb"}},
+  {"id": "share-proof", "category": "Export", "persona": "quick", "youtube": null,
+   "title": {"en": "Share a proof and collect comments", "he": "שיתוף הדפסת מבחן ואיסוף הערות"}}
+]
