@@ -110,3 +110,19 @@ details p { margin: 10px 0 0; color: var(--muted); }
   .nav nav { display: none; } .lang { margin-inline-start: auto; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* screenshots and videos */
+figure { margin: 0; }
+figure.shot { aspect-ratio: 16 / 10; margin-bottom: 10px; }
+figure.shot a { display: block; height: 100%; }
+figure.shot img, .gvideo video, .hero-video video, .vfile video { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); background: #000; }
+figure.shot img { height: 100%; object-fit: cover; }
+figure.shot a:hover img { border-color: var(--accent); }
+.gvideo { margin: 26px 0 0; max-width: 860px; }
+.gvideo figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); }
+.hero-video video { aspect-ratio: 16 / 10; box-shadow: 0 18px 50px rgba(0, 0, 0, .35); }
+.vfile { aspect-ratio: 16 / 10; }
+.vfile video { height: 100%; object-fit: cover; }
+.gvideos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
+.gvideos .gvideo { margin: 0; max-width: none; }
+@media (max-width: 860px) { .gvideos { grid-template-columns: minmax(0, 1fr); } .gvideo { max-width: none; } }

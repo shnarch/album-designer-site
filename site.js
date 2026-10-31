@@ -19,6 +19,7 @@
       if (html) el.innerHTML = text ?? el.dataset.en; else el.textContent = text ?? el.dataset.en;
     });
     $$("[data-i18n-ph]").forEach((el) => (el.placeholder = PH[lang]));
+    $$("[data-i18n-alt]").forEach((el) => (el.alt = (lang === "he" ? window.HE[el.dataset.i18nAlt] : window.EN_ALT[el.dataset.i18nAlt]) || ""));
     $$("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
     document.title = lang === "he" ? "Album Designer - מעצבים אלבום תמונות" : "Album Designer";
     if (remember) try { localStorage.setItem("lang", lang); } catch {}
@@ -63,7 +64,9 @@
     $("#vgrid").innerHTML = videos.filter((v) => !vCat || v.category === vCat).map((v) => {
       const title = (v.title[lang] || v.title.en).replace(/</g, "&lt;");
       const tag = v.persona === "pro" ? (lang === "he" ? window.HE.p_pro_tag : "Professional design") : (lang === "he" ? window.HE.p_quick_tag : "Quick album");
-      const media = v.youtube
+      const media = v.file
+        ? `<div class="vthumb vfile"><video controls preload="none" playsinline poster="media/${v.file}.webp"><source src="media/${v.file}.mp4" type="video/mp4"></video></div>`
+        : v.youtube
         ? `<a class="ph vthumb" href="https://www.youtube-nocookie.com/embed/${v.youtube}" target="_blank" rel="noopener"><span class="play">▶</span></a>`
         : `<div class="ph vthumb" aria-hidden="true"><span class="play">▶</span><small>${t("v_soon")}</small></div>`;
       return `<article class="vcard">${media}<h3>${title}</h3><p class="fine">${label(v.category)} · ${tag}</p></article>`;

@@ -1,6 +1,26 @@
 // Hebrew texts. The English texts are in index.html itself (data-i18n="key"), so the page reads fine
 // without JavaScript; this file only holds the Hebrew, plus the few texts the scripts write.
 window.HE = {
+  alt_i1: "אזהרת Windows ‏\"Windows protected your PC\": לוחצים More info ואז Run anyway",
+  alt_i2: "חלון ההגדרות, לשונית App, עם שדה מפתח ה-Claude",
+  alt_i3: "גוררים תמונות לחלון של Album Designer",
+  alt_q1: "Album Designer אחרי ייבוא של 60 תמונות, מקובצות לפי יום בסידור",
+  alt_q2: "יום שפוצל לשתי קבוצות, עם לחיצה על רווח ושינוי שם של קבוצה",
+  alt_q3: "האלבום המוכן בתצוגת אלבום, ספרד אחרי ספרד",
+  alt_q4: "ספרד עם חצי העיצובים שמראים אפשרות 3 מתוך 3",
+  alt_q5: "תפריט הייצוא: PDF להדפסת מבחן, קבצים מוכנים ל-Blurb והדפסת מבחן לשיתוף",
+  alt_r1: "שירות פרסום ב-Lightroom Classic שהאוספים שלו הופכים לסיפורים ב-Album Designer",
+  alt_r2: "תצוגת הסידור עם תגיות גיבור, אהובה וחלופות על התמונות",
+  alt_r3: "תמונות שנבחרו בשני העמודים של ספרד ומוזזות יחד כקבוצה אחת",
+  alt_r4: "ספרד שהעמוד השמאלי בו נעול ל-AI, עם סמל מנעול",
+  alt_r5: "מעצב הכריכה עם הכריכה הקדמית והאחורית",
+  alt_r6: "חלון הצ'אט: Claude משנה רווחים ומחליף שתי תמונות",
+  alt_r7: "קווי העזר להדפסה: חיתוך, שוליים לחיתוך ואזור בטוח, עם תפריט הייצוא פתוח",
+  vc_install: "התקנה, חיבור Claude והוספת התמונות הראשונות",
+  vc_quick: "אלבום מהיר שלם בפחות מדקה",
+  vc_pro: "מעצבים ספרד ביד: הזזה, קבוצות, חיתוך, רווחים וקווי עזר להדפסה",
+  vc_lock: "נעילה ל-AI: משאירים מה שהסתיים",
+  vc_alt: "כפילויות וחלופות: התמונה הטובה ביותר, או שתיים",
   nav_watch: "צפייה", nav_download: "הורדה", nav_guides: "מדריכים", nav_videos: "סרטונים", nav_feedback: "משוב",
   hero_eyebrow: "גרסת בטא ל-Windows",
   hero_h1: "מעצבים אלבום תמונות מודפס בערב אחד",
@@ -32,12 +52,12 @@ window.HE = {
   q4_h: "4. מנסים עיצובים אחרים", q4_p: "לוחצים על החצים ליד עמוד, ספרד או סיפור כדי לראות עיצובים אחרים. Ctrl+Z חוזר צעד אחורה.",
   q5_h: "5. מייצאים", q5_p: "מייצאים PDF להדפסת מבחן לעיון, או קבצים מוכנים להדפסה ב-Blurb.",
   r1_h: "1. מפרסמים מ-Lightroom", r1_p: "התוסף הופך אוספים ב-Lightroom לסיפורים ומסמן תמונות שפורסמו \"in album\". עורכים ב-Lightroom ומפרסמים שוב: העמודים מתעדכנים.",
-  r2_h: "2. מסדרים ומסמנים", r2_p: "מסמנים גיבורים, אהובות ואולי. מסמנים חלופות ונותנים לחדה יותר לנצח, או שומרים תמונות יחד באותו עמוד.",
-  r3_h: "3. מעצבים ספרד אחרי ספרד", r3_p: "הספרד הוא הקנבס: מזיזים, משנים גודל וחותכים בכל מקום, גם מעבר לקפל. אזהרות מראות הדפסה רכה ופנים חתוכות.",
-  r4_h: "4. נועלים מה שהסתיים", r4_p: "נעילה ל-AI על ספרד, ועיצוב מחדש, Lay out album ו-Claude משאירים אותו בדיוק כמו שהוא.",
+  r2_h: "2. מסדרים ומסמנים", r2_p: "מסמנים גיבורים, אהובות ואולי. תמונות כמעט זהות נמצאות לבד כחלופות: משווים אותן זו לצד זו (Space), בוחרים אחת, או לוחצים עם ⇧ כדי להשתמש גם בשנייה. אפשר גם לשמור תמונות יחד באותו עמוד.",
+  r3_h: "3. מעצבים ספרד אחרי ספרד", r3_p: "הספרד הוא הקנבס: מזיזים, משנים גודל וחותכים בכל מקום, גם מעבר לקפל. אפשר לבחור תמונות בשני העמודים ולהזיז או לשנות להן גודל יחד, עם קווי עזר והצמדה לרווחים שווים. לחיצה כפולה חותכת, ומחוון הרווחים מרווח עמוד, ספרד או סיפור שלם. אזהרות מראות הדפסה רכה ופנים חתוכות.",
+  r4_h: "4. נועלים מה שהסתיים", r4_p: "לוחצים L כדי לנעול ל-AI את העמוד שסיימתם (לכל עמוד נעילה משלו). עיצוב מחדש, Lay out album ו-Claude משאירים אותו בדיוק כמו שהוא, והעריכות שלכם ממשיכות לעבוד.",
   r5_h: "5. טקסט וכריכה", r5_p: "תיבות טקסט עם תמיכה בעברית ובכתיבה מימין לשמאל, ומעצב כריכה.",
-  r6_h: "6. מבקשים מ-Claude", r6_p: "\"תגדיל את תמונת האגם בעמוד 5.\" Claude משנה את האלבום באמצעות אותם כלים שלכם, ומכבד את הנעילות.",
-  r7_h: "7. הדפסת מבחן והדפסה", r7_p: "שולחים הדפסת מבחן לשיתוף ומייבאים את ההערות, ואז מייצאים קבצים מוכנים ל-Blurb עם שוליים לחיתוך ואזורים בטוחים.",
+  r6_h: "6. מבקשים מ-Claude", r6_p: "\"תגדיל את תמונת האגם בעמוד 5.\" Claude משנה את האלבום באמצעות אותם כלים שלכם: רווחים, רקעים, מסגרות, הזזה והחלפה של תמונות, ומכבד את הנעילות.",
+  r7_h: "7. הדפסת מבחן והדפסה", r7_p: "שולחים הדפסת מבחן לשיתוף ומייבאים את ההערות, ואז מייצאים קבצים מוכנים ל-Blurb עם שוליים לחיתוך ואזורים בטוחים. אפשר לשכפל אלבום כדי לנסות עיצוב אחר בלי לגעת במקור.",
   guide_video_soon: "מדריך וידאו: בקרוב",
   v_h: "ספריית סרטונים", v_lead: "סרטוני הדרכה קצרים, שיתווספו ככל שייווצרו.", v_all: "הכול", v_soon: "בקרוב",
   c_Getting_started: "להתחיל", c_Arrange: "סידור", c_Design: "עיצוב", c_Export: "ייצוא", c_Lightroom: "Lightroom",
@@ -60,4 +80,23 @@ window.HE = {
 window.EN = {
   v_all: "All", v_soon: "Coming soon", f_ok: "Thanks, it's logged.", f_err: "Couldn't send that. Try again in a moment.",
   f_short: "Write at least a few words.", f_off: "The feedback box isn't switched on yet.", f_sending: "Sending…", v_released: "Released", v_beta: "beta"
+};
+
+// English alt texts of the screenshots (the Hebrew ones are in window.HE)
+window.EN_ALT = {
+  alt_i1: "The Windows warning \"Windows protected your PC\": click More info, then Run anyway",
+  alt_i2: "The Settings window, App tab, with the Anthropic API key field",
+  alt_i3: "Dragging photos into the Album Designer window",
+  alt_q1: "Album Designer after importing 60 photos, grouped by day in Arrange",
+  alt_q2: "A day split into two groups, with a gap clicked and a group renamed",
+  alt_q3: "The finished album in Album view, spread by spread",
+  alt_q4: "A spread with the design arrows showing option 3 of 3",
+  alt_q5: "The Export menu: proof PDF, Blurb-ready files and a shareable proof",
+  alt_r1: "A Lightroom Classic publish service whose collections become stories in Album Designer",
+  alt_r2: "Arrange with hero, favorite and alternatives badges on the photos",
+  alt_r3: "Photos selected on both pages of a spread, moved together as one group",
+  alt_r4: "A spread with the left page AI-locked, shown by a padlock",
+  alt_r5: "The cover designer with the front and back cover",
+  alt_r6: "The chat panel: Claude changes the gaps and swaps two photos",
+  alt_r7: "The print guides (trim, bleed and safe zone) with the Export menu open",
 };
