@@ -17,7 +17,7 @@ h1 { font-size: clamp(30px, 5vw, 48px); letter-spacing: -.01em; }
 h2 { font-size: 28px; margin-top: 0; }
 h3 { font-size: 17px; }
 p { margin: 0 0 .8em; }
-.wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 section.wrap { padding-top: 64px; padding-bottom: 8px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .fine { font-size: 13px; color: var(--muted); }
@@ -37,7 +37,8 @@ section.wrap { padding-top: 64px; padding-bottom: 8px; }
 [dir="rtl"] .lang button:first-child { border-radius: 0 6px 6px 0; } [dir="rtl"] .lang button:last-child { border-radius: 6px 0 0 6px; }
 .lang button[aria-pressed="true"] { background: var(--card); color: var(--fg); }
 
-.hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-top: 56px; }
+.hero { display: block; padding-top: 48px; }
+.hero-text { max-width: 760px; }
 .eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .6em; }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 10px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--fg); font: inherit; font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer; }
@@ -126,3 +127,23 @@ figure.shot a:hover img { border-color: var(--accent); }
 .gvideos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
 .gvideos .gvideo { margin: 0; max-width: none; }
 @media (max-width: 860px) { .gvideos { grid-template-columns: minmax(0, 1fr); } .gvideo { max-width: none; } }
+
+/* big pictures: the first video fills the page width, every step is a row with its picture on the larger side */
+.hero-video { margin-top: 34px; }
+.hero-video video { aspect-ratio: 16 / 10; width: 100%; }
+.vcap { margin: 8px 0 0; font-size: 15px; color: var(--muted); }
+.steps, .gsteps { display: block; margin-top: 30px; }
+.steps > li, .gsteps > li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 34px; align-items: center; margin: 0 0 40px; }
+.stext h3 { font-size: 21px; margin-bottom: 8px; }
+.stext p { font-size: 16.5px; }
+figure.shot { margin-bottom: 0; }
+.gvideo, .gvideos .gvideo { max-width: none; }
+.gvideos { display: block; margin-top: 10px; }
+.gvideos .gvideo { margin: 0 0 34px; }
+.gvideo figcaption { font-size: 15px; }
+.vgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.vcard h3 { font-size: 17px; }
+@media (max-width: 860px) {
+  .steps > li, .gsteps > li { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-bottom: 30px; }
+  .vgrid { grid-template-columns: minmax(0, 1fr); }
+}
