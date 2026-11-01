@@ -71,10 +71,19 @@ details p { margin: 10px 0 0; color: var(--muted); }
 .notes { margin-top: 24px; } .notes ul { margin: 0 0 6px; padding-inline-start: 20px; color: var(--muted); }
 .mac-note { margin-top: 14px; }
 
-.personas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 24px; }
-.personas button { text-align: start; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; color: var(--fg); font: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
-.personas button b { font-size: 18px; } .personas button > span:last-child { color: var(--muted); font-size: 14px; }
-.personas button[aria-selected="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.personas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
+.personas button { text-align: start; background: var(--panel); border: 2px solid var(--line); border-radius: var(--radius); padding: 16px 18px; color: var(--fg); font: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
+.personas button b { font-size: 18px; } .personas button > span:not(.tag):not(.pick) { color: var(--muted); font-size: 14px; }
+.personas button:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.personas button[aria-selected="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--panel)); }
+.personas button[aria-selected="false"] { opacity: .88; }
+.pick { margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--accent); }
+.pick-on, .pick-off { display: none; }
+.personas button[aria-selected="true"] .pick-on, .personas button[aria-selected="false"] .pick-off { display: inline; }
+.personas button[aria-selected="false"] .pick { color: var(--muted); }
+.pick-hint { color: var(--muted); font-size: 15px; margin: -4px 0 14px; }
+.guide { border: 2px solid var(--accent); border-radius: var(--radius); padding: 22px; }
+.shot { border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0, 0, 0, .25); }
 .tag { align-self: flex-start; font-size: 12px; padding: 2px 10px; border-radius: 10px; background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent); }
 .tag.pro { background: color-mix(in srgb, var(--link) 22%, transparent); color: var(--link); }
 .gsteps { margin-top: 0; }
