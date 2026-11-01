@@ -1,11 +1,12 @@
 {
- "version": "2.1.0",
- "released": "2026-10-25",
- "windows": "https://github.com/shnarch/album-designer-site/releases/latest",
+ "version": "2.2.0",
+ "released": "2026-11-01",
+ "windows": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-Setup-2.2.0.exe",
  "mac": null,
  "notes": [
-  "First beta: design a printed photo album with Claude's help, for Windows",
-  "Arrange photos into stories, lay out the album in one click, edit every page by hand",
-  "Export a proof PDF or Blurb-ready print files"
+  "Lock single pages: each page has its own padlock (press L), and locked pages are never redesigned, even when you add or remove photos",
+  "Easier editing on the spread: guides for equal spacing, select photos across both pages as one group, crop by double-click, and one undo history for edits and views",
+  "Page gaps for a single page, spread or story, plus new chat tools so Claude can change gaps, page colour and photo places",
+  "Duplicate an album from All albums, reopen the album on the page you left, and pick a second alternative by hand"
  ]
 }
