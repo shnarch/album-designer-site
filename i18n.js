@@ -33,6 +33,16 @@ window.HE = {
   how3_h: "מתאימים אישית ומדפיסים", how3_p: "מזיזים, חותכים וכותבים הכול ביד, מבקשים שינויים מ-Claude, ואז מייצאים הדפסת מבחן או קבצים מוכנים להדפסה.",
   dl_h: "הורדה והתקנה", dl_current: "הגרסה הנוכחית", dl_req: "Windows 10 או 11. ייצוא PDF משתמש ב-Edge או ב-Chrome, שכבר קיימים ב-Windows.",
   btn_download_win2: "הורדה ל-Windows", btn_mac_soon2: "Mac: בקרוב", shot: "צילום מסך",
+  dl_req2: "Windows 10 או 11, או Mac עם macOS 11 ומעלה. ייצוא PDF משתמש ב-Chrome או ב-Edge (ב-Windows כבר יש Edge; ב-Mac מתקינים Chrome, בחינם).",
+  btn_download_mac: "הורדה ל-Mac", os_win: "Windows", os_mac: "Mac",
+  mac_which: "ההורדה ל-Mac מתאימה לשבב Apple (M1 ומעלה).", mac_intel: "Mac ישן עם שבב Intel? הורידו את הקובץ הזה.", mac_which2: "(בתפריט Apple › About This Mac רואים איזה יש לכם.)",
+  alt_i1m: "ההודעות של ה-Mac: גוררים ל-Applications, לוחצים Done, ואז Open Anyway ב-Privacy & Security",
+  s1m_h: "1. מתקינים ופותחים את התוכנה",
+  s1m_p: "פותחים את הקובץ שהורדתם וגוררים את <b>Album Designer</b> אל <b>Applications</b>. אחר כך פותחים אותה מתיקיית Applications. בזמן הבטא התוכנה עדיין לא חתומה בחשבון של Apple, לכן ה-Mac יציג <b>\"Not Opened\"</b>: לוחצים <b>Done</b>. פותחים <b>System Settings › Privacy &amp; Security</b>, גוללים למטה, לוחצים <b>Open Anyway</b> ליד Album Designer ומאשרים בסיסמה או ב-Touch ID. עושים את זה רק בפעם הראשונה.",
+  s1m_t: "לא עובד? דרך Terminal",
+  s1m_tp: "פותחים <b>Terminal</b>, מדביקים את השורה הזאת ולוחצים Return, ואז פותחים שוב את התוכנה: <code dir=\"ltr\">xattr -dr com.apple.quarantine \"/Applications/Album Designer.app\"</code>",
+  s3m_p: "גוררים את התמונות לתוך החלון. בפעם הבאה פותחים את Album Designer מתיקיית Applications. אם macOS שואל אם לתת לה גישה לתיקיית Documents, לוחצים <b>Allow</b>. כדי לסגור, לוחצים על הסמל הקטן שלה בשורת התפריטים למעלה בצד ימין ובוחרים <b>Quit</b>.",
+  faq4m_q: "בטוח ללחוץ \"Open Anyway\" ב-Mac?", faq4m_a: "ה-Mac מזהיר מכל אפליקציה שלא חתומה דרך תוכנית המפתחים בתשלום של Apple. בזמן הבטא התוכנה לא חתומה. מורידים אותה רק מהדף הזה.",
   s1_h: "1. מריצים את ההתקנה",
   s1_p: "פותחים את הקובץ שהורדתם. ייתכן ש-Windows יציג חלון כחול, <b>\"Windows protected your PC\"</b>. בזמן הבטא ההתקנה עדיין לא חתומה, לכן לוחצים <b>More info</b> ואז <b>Run anyway</b>. אחר כך לוחצים Next עד הסוף.",
   s2_h: "2. מחברים את Claude (לא חובה)",
@@ -87,6 +97,7 @@ window.EN = {
 
 // English alt texts of the screenshots (the Hebrew ones are in window.HE)
 window.EN_ALT = {
+  alt_i1m: "The Mac messages: drag to Applications, click Done, then Open Anyway in Privacy & Security",
   alt_i1: "The Windows warning \"Windows protected your PC\": click More info, then Run anyway",
   alt_i2: "The Settings window, App tab, with the Anthropic API key field",
   alt_i3: "Dragging photos into the Album Designer window",

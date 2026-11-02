@@ -161,3 +161,13 @@ figure.shot { margin-bottom: 0; }
   .steps > li, .gsteps > li { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-bottom: 30px; }
   .vgrid { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Windows or Mac install steps */
+[hidden] { display: none !important; }
+.os-switch { display: inline-flex; gap: 0; margin: 22px 0 0; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.os-switch button { background: var(--panel); color: var(--muted); border: 0; padding: 8px 22px; font: inherit; font-weight: 600; cursor: pointer; }
+.os-switch button[aria-selected="true"] { background: var(--accent); color: var(--accent-fg); }
+.steps[data-os="win"] > li[data-for="mac"], .steps[data-os="mac"] > li[data-for="win"] { display: none; }
+.intel { margin: 8px 2px 0; }
+.steps code { word-break: break-all; font-size: 13px; background: color-mix(in srgb, var(--fg) 9%, transparent); padding: 1px 6px; border-radius: 5px; }
+.steps details { margin-top: 10px; }

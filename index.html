@@ -51,29 +51,47 @@
   <div class="dl-card">
     <div>
       <p class="dl-version"><b data-i18n="dl_current">Current version</b> <span class="vnum" data-version>…</span> <small data-released></small></p>
-      <p class="fine" data-i18n="dl_req">Windows 10 or 11. PDF export uses Edge or Chrome, which Windows already has.</p>
+      <p class="fine" data-i18n="dl_req2">Windows 10 or 11, or a Mac with macOS 11 or newer. PDF export uses Chrome or Edge (Windows already has Edge; on a Mac, install Chrome, which is free).</p>
     </div>
     <div class="cta">
       <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-windows data-i18n="btn_download_win2">Download for Windows</a>
-      <span class="btn disabled" aria-disabled="true" data-i18n="btn_mac_soon2">Mac: coming soon</span>
+      <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-mac hidden data-i18n="btn_download_mac">Download for Mac</a>
+      <span class="btn disabled" aria-disabled="true" data-mac-soon data-i18n="btn_mac_soon2">Mac: coming soon</span>
     </div>
   </div>
+  <p class="fine intel" data-dl-intel-row hidden><span data-i18n="mac_which">Download for Mac is for Apple silicon (M1 and newer).</span> <a href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-mac-intel data-i18n="mac_intel">Older Mac with an Intel chip? Download this one.</a> <span data-i18n="mac_which2">(Apple menu › About This Mac shows which you have.)</span></p>
 
-  <ol class="steps">
-    <li>
+  <div class="os-switch" role="tablist" aria-label="System">
+    <button type="button" role="tab" data-os-tab="win" aria-selected="true" data-i18n="os_win">Windows</button>
+    <button type="button" role="tab" data-os-tab="mac" aria-selected="false" data-i18n="os_mac">Mac</button>
+  </div>
+
+  <ol class="steps" data-os-steps>
+    <li data-for="win">
       <figure class="shot"><a href="media/install-1-run.webp" target="_blank" rel="noopener"><img src="media/install-1-run.webp" alt="" data-i18n-alt="alt_i1" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s1_h">1. Run the installer</h3>
       <p data-i18n-html="s1_p">Open the file you downloaded. Windows may show a blue box, <b>"Windows protected your PC"</b>. During the beta the installer isn't signed yet, so click <b>More info</b>, then <b>Run anyway</b>. Then click Next until it finishes.</p></div>
+    </li>
+    <li data-for="mac">
+      <figure class="shot"><a href="media/install-1-run-mac.webp" target="_blank" rel="noopener"><img src="media/install-1-run-mac.webp" alt="" data-i18n-alt="alt_i1m" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
+      <div class="stext"><h3 data-i18n="s1m_h">1. Install and open the app</h3>
+      <p data-i18n-html="s1m_p">Open the file you downloaded and drag <b>Album Designer</b> onto <b>Applications</b>. Then open it from Applications. During the beta the app isn't signed with an Apple account yet, so the Mac says it <b>"Not Opened"</b>: click <b>Done</b>. Open <b>System Settings › Privacy &amp; Security</b>, scroll down, click <b>Open Anyway</b> next to Album Designer and confirm with your password or Touch ID. You only do this the first time.</p>
+      <details class="fine"><summary data-i18n="s1m_t">Doesn't work? Use Terminal</summary><p data-i18n-html="s1m_tp">Open <b>Terminal</b>, paste this line and press Return, then open the app again: <code>xattr -dr com.apple.quarantine "/Applications/Album Designer.app"</code></p></details></div>
     </li>
     <li>
       <figure class="shot"><a href="media/install-2-key.webp" target="_blank" rel="noopener"><img src="media/install-2-key.webp" alt="" data-i18n-alt="alt_i2" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s2_h">2. Connect Claude (optional)</h3>
       <p data-i18n-html="s2_p">Album Designer opens in your browser. To let Claude read your photos and chat with you, open <b>Settings › App</b>, paste your Claude key into <b>Anthropic API key</b> and save. You can skip this: layouts work without a key.</p></div>
     </li>
-    <li>
+    <li data-for="win">
       <figure class="shot"><a href="media/install-3-add.webp" target="_blank" rel="noopener"><img src="media/install-3-add.webp" alt="" data-i18n-alt="alt_i3" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s3_h">3. Add photos</h3>
       <p data-i18n-html="s3_p">Drag your photos into the window. Next time, open Album Designer from the Start menu. To close it, right-click its icon by the clock and choose <b>Quit</b>.</p></div>
+    </li>
+    <li data-for="mac">
+      <figure class="shot"><a href="media/install-3-add.webp" target="_blank" rel="noopener"><img src="media/install-3-add.webp" alt="" data-i18n-alt="alt_i3" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
+      <div class="stext"><h3 data-i18n="s3_h">3. Add photos</h3>
+      <p data-i18n-html="s3m_p">Drag your photos into the window. Next time, open Album Designer from Applications. If macOS asks to let it use your Documents folder, click <b>Allow</b>. To close it, click its small icon in the menu bar at the top right and choose <b>Quit</b>.</p></div>
     </li>
   </ol>
 
@@ -89,7 +107,6 @@
     <p class="fine"><a href="https://github.com/shnarch/album-designer-site/releases" data-i18n="notes_all">All versions</a></p>
   </div>
 
-  <div class="mac-note fine"><b data-i18n="mac_h">Mac:</b> <span data-i18n-html="mac_p">the installer is on its way. It will need one extra step the first time: open <b>System Settings › Privacy &amp; Security</b> and click <b>Open Anyway</b>.</span></div>
 </section>
 
 <section class="wrap" id="guides">
@@ -214,6 +231,7 @@
   <details><summary data-i18n="faq2_q">Where do my photos go?</summary><p data-i18n="faq2_a">Albums are stored on your computer, in Documents › Album Designer. When you add a Claude key, small copies of your photos are sent to Anthropic so Claude can read them. Nothing else leaves your computer.</p></details>
   <details><summary data-i18n="faq3_q">What does Claude cost?</summary><p data-i18n="faq3_a">You pay Anthropic directly for what you use, with your own key. Reading 100 photos costs about three cents with the default model. The app shows an estimate of what you have spent.</p></details>
   <details><summary data-i18n="faq4_q">Is it safe to click "Run anyway"?</summary><p data-i18n="faq4_a">Windows warns about every app that isn't signed with a paid certificate. During the beta the installer isn't signed. Download it only from this page.</p></details>
+  <details><summary data-i18n="faq4m_q">Is it safe to click "Open Anyway" on a Mac?</summary><p data-i18n="faq4m_a">The Mac warns about every app that isn't signed through Apple's paid developer program. During the beta the app isn't signed. Download it only from this page.</p></details>
   <details><summary data-i18n="faq5_q">Which printers and sizes?</summary><p data-i18n="faq5_a">The default is Blurb's Large Square. You can set any page size and margins, and the proof PDF works with any printer.</p></details>
   <details><summary data-i18n="faq6_q">Does it work in Hebrew?</summary><p data-i18n="faq6_a">Yes: right-to-left albums, Hebrew text and fonts, and Claude writes titles in Hebrew for those albums.</p></details>
 </section>
