@@ -1,12 +1,12 @@
 :root {
   --bg: #1b1b1c; --panel: #252527; --card: #2d2d30; --fg: #ececea; --muted: #a2a29d; --line: #3a3a3d;
-  --accent: #e0785a; --accent-fg: #1b1b1c; --link: #8db4ff; --ok: #6cc08b; --bad: #ff8a80;
+  --accent: #e0785a; --accent-fg: #1b1b1c; --link: #8db4ff; --blue: #6a9bff; --ok: #6cc08b; --bad: #ff8a80;
   --radius: 12px;
   color-scheme: dark;
 }
 @media (prefers-color-scheme: light) {
   :root { --bg: #f6f5f2; --panel: #ffffff; --card: #ffffff; --fg: #1d1d1f; --muted: #66665f; --line: #dedcd6;
-    --accent: #c4552f; --accent-fg: #ffffff; --link: #1f5fbf; --ok: #2c7a4b; --bad: #b3261e; color-scheme: light; }
+    --accent: #c4552f; --accent-fg: #ffffff; --link: #1f5fbf; --blue: #2f63c9; --ok: #2c7a4b; --bad: #b3261e; color-scheme: light; }
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 70px; }
@@ -82,7 +82,12 @@ details p { margin: 10px 0 0; color: var(--muted); }
 .personas button[aria-selected="true"] .pick-on, .personas button[aria-selected="false"] .pick-off { display: inline; }
 .personas button[aria-selected="false"] .pick { color: var(--muted); }
 .pick-hint { color: var(--muted); font-size: 15px; margin: -4px 0 14px; }
-.guide { border: 2px solid var(--accent); border-radius: var(--radius); padding: 22px; }
+.guide { border: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--panel)); border-radius: var(--radius); padding: 22px; }
+.personas button[data-persona="pro"]:hover { border-color: color-mix(in srgb, var(--blue) 55%, var(--line)); }
+.personas button[data-persona="pro"][aria-selected="true"] { border-color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, var(--panel)); }
+.personas button[data-persona="pro"][aria-selected="true"] .pick { color: var(--blue); }
+#guide-pro { border-color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, var(--panel)); }
+#guide-pro .tag { background: color-mix(in srgb, var(--blue) 22%, transparent); color: var(--blue); }
 .shot { border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0, 0, 0, .25); }
 .tag { align-self: flex-start; font-size: 12px; padding: 2px 10px; border-radius: 10px; background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent); }
 .tag.pro { background: color-mix(in srgb, var(--link) 22%, transparent); color: var(--link); }
