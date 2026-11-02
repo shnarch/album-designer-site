@@ -34,11 +34,8 @@
     $$("[data-version-short]").forEach((el) => (el.textContent = v ? `v${v}` : ""));
     $$("[data-released]").forEach((el) => (el.textContent = latest?.released ? `· ${t("v_released")} ${latest.released}` : ""));
     if (latest?.windows) $$("[data-dl-windows]").forEach((a) => { if (a.tagName === "A" && !a.getAttribute("href").startsWith("#")) a.href = latest.windows; });
-    const mac = !!latest?.mac;
-    $$("[data-dl-mac]").forEach((a) => { a.hidden = !mac; if (mac) a.href = latest.mac; });
-    $$("[data-mac-soon]").forEach((el) => (el.hidden = mac));
-    $$("[data-dl-intel-row]").forEach((el) => (el.hidden = !(mac && latest.mac_intel)));
-    $$("[data-dl-mac-intel]").forEach((a) => { if (latest?.mac_intel) a.href = latest.mac_intel; });
+    if (latest?.mac) $$("[data-dl-mac]").forEach((a) => (a.href = latest.mac));
+    if (latest?.mac_intel) $$("[data-dl-mac-intel]").forEach((a) => (a.href = latest.mac_intel));
     const notes = $("[data-notes]");
     if (notes && latest?.notes) notes.innerHTML = latest.notes.map((n) => `<li>${n.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]))}</li>`).join("");
   }
@@ -48,7 +45,7 @@
   function showOs(os, remember = false) {
     os = os === "mac" ? "mac" : "win";
     $$("[data-os-tab]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.osTab === os)));
-    const steps = $(".steps[data-os-steps]"); if (steps) steps.dataset.os = os;
+    const root = $("[data-os-root]"); if (root) root.dataset.os = os;
     if (remember) try { localStorage.setItem("os", os); } catch {}
   }
   $$("[data-os-tab]").forEach((b) => b.addEventListener("click", () => showOs(b.dataset.osTab, true)));

@@ -46,27 +46,27 @@
   <article><b>3</b><h3 data-i18n="how3_h">Make it yours, then print</h3><p data-i18n="how3_p">Move, crop and write anything by hand, ask Claude for changes, then export a proof or print-ready files.</p></article>
 </section>
 
-<section class="wrap" id="download">
+<section class="wrap" id="download" data-os-root>
   <h2 data-i18n="dl_h">Download and install</h2>
   <div class="dl-card">
-    <div>
+    <div class="dl-info">
       <p class="dl-version"><b data-i18n="dl_current">Current version</b> <span class="vnum" data-version>…</span> <small data-released></small></p>
-      <p class="fine" data-i18n="dl_req2">Windows 10 or 11, or a Mac with macOS 11 or newer. PDF export uses Chrome or Edge (Windows already has Edge; on a Mac, install Chrome, which is free).</p>
+      <div class="os-switch" role="tablist" aria-label="System">
+        <button type="button" role="tab" data-os-tab="win" aria-selected="true" data-i18n="os_win">Windows</button>
+        <button type="button" role="tab" data-os-tab="mac" aria-selected="false" data-i18n="os_mac">Mac</button>
+      </div>
+      <p class="fine" data-for="win" data-i18n="dl_req_win">Windows 10 or 11. PDF export uses Edge or Chrome, which Windows already has.</p>
+      <p class="fine" data-for="mac" data-i18n="dl_req_mac">macOS 11 or newer. PDF export needs Chrome, which is free.</p>
     </div>
     <div class="cta">
-      <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-windows data-i18n="btn_download_win2">Download for Windows</a>
-      <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-mac hidden data-i18n="btn_download_mac">Download for Mac</a>
-      <span class="btn disabled" aria-disabled="true" data-mac-soon data-i18n="btn_mac_soon2">Mac: coming soon</span>
+      <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-for="win" data-dl-windows data-i18n="btn_download_win2">Download for Windows</a>
+      <a class="btn primary" href="https://github.com/shnarch/album-designer-site/releases/latest" data-for="mac" data-dl-mac data-i18n="btn_download_mac2">Download for Mac (Apple silicon)</a>
+      <a class="btn" href="https://github.com/shnarch/album-designer-site/releases/latest" data-for="mac" data-dl-mac-intel data-i18n="btn_mac_intel">Intel Mac</a>
+      <p class="fine cta-hint" data-for="mac" data-i18n="mac_which3">Not sure which? Apple menu › About This Mac: "Apple M…" means Apple silicon, "Intel" means Intel.</p>
     </div>
   </div>
-  <p class="fine intel" data-dl-intel-row hidden><span data-i18n="mac_which">Download for Mac is for Apple silicon (M1 and newer).</span> <a href="https://github.com/shnarch/album-designer-site/releases/latest" data-dl-mac-intel data-i18n="mac_intel">Older Mac with an Intel chip? Download this one.</a> <span data-i18n="mac_which2">(Apple menu › About This Mac shows which you have.)</span></p>
 
-  <div class="os-switch" role="tablist" aria-label="System">
-    <button type="button" role="tab" data-os-tab="win" aria-selected="true" data-i18n="os_win">Windows</button>
-    <button type="button" role="tab" data-os-tab="mac" aria-selected="false" data-i18n="os_mac">Mac</button>
-  </div>
-
-  <ol class="steps" data-os-steps>
+  <ol class="steps">
     <li data-for="win">
       <figure class="shot"><a href="media/install-1-run.webp" target="_blank" rel="noopener"><img src="media/install-1-run.webp" alt="" data-i18n-alt="alt_i1" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s1_h">1. Run the installer</h3>
