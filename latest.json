@@ -2,7 +2,8 @@
  "version": "2.2.0",
  "released": "2026-11-01",
  "windows": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-Setup-2.2.0.exe",
- "mac": null,
+ "mac": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-2.2.0-apple-silicon.dmg",
+ "mac_intel": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-2.2.0-intel.dmg",
  "notes": [
   "Lock single pages: each page has its own padlock (press L), and locked pages are never redesigned, even when you add or remove photos",
   "Easier editing on the spread: guides for equal spacing, select photos across both pages as one group, crop by double-click, and one undo history for edits and views",
