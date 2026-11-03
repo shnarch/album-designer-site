@@ -1,6 +1,8 @@
-# Script: "Intro" (89 s), final
+# Script: "Intro" (90 s), final
 
 The first video a new visitor sees (the website's main video, `media/intro.mp4`, the version without captions). `first-album` stays in the library as the longer walk-through.
+
+The video starts with 0.8 s of the held title card before the voice, so a browser that is a moment slow to start playing doesn't cut off the first word.
 
 Voice: Kokoro "af_heart" (US English), generated locally, with quiet music. 1920 x 1200, 30 frames per second. A version with one-line yellow subtitles was also made (the same recording).
 
