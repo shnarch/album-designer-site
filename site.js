@@ -21,7 +21,7 @@
     $$("[data-i18n-ph]").forEach((el) => (el.placeholder = PH[lang]));
     $$("[data-i18n-alt]").forEach((el) => (el.alt = (lang === "he" ? window.HE[el.dataset.i18nAlt] : window.EN_ALT[el.dataset.i18nAlt]) || ""));
     $$("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    document.title = lang === "he" ? "Album Designer - מעצבים אלבום תמונות" : "Album Designer";
+    document.title = lang === "he" ? "FlowAlbum - הסיפורים שלכם, מעוצבים מחדש בלחיצה" : "FlowAlbum: your stories, redesigned in a click";
     if (remember) try { localStorage.setItem("lang", lang); } catch {}
     renderVersion(); renderVideos();
   }

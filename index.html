@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Album Designer</title>
-<meta name="description" content="Design a printed photo album in an evening. Album Designer arranges your photos into stories and pages with Claude's help, and every detail stays yours to change.">
-<meta property="og:title" content="Album Designer">
+<title>FlowAlbum</title>
+<meta name="description" content="FlowAlbum: your stories, redesigned in a click. Design a printed photo album in an evening. FlowAlbum arranges your photos into stories and pages with Claude's help, and every detail stays yours to change.">
+<meta property="og:title" content="FlowAlbum: your stories, redesigned in a click">
 <meta property="og:description" content="Design a printed photo album in an evening, with Claude's help. Your photos stay on your computer.">
-<meta property="og:image" content="assets/icon-512.png">
-<link rel="icon" type="image/png" href="assets/icon-128.png">
+<meta property="og:image" content="https://shnarch.github.io/album-designer-site/assets/og.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="logo" href="#top"><img src="assets/icon-128.png" alt="" width="28" height="28"> Album Designer <span class="ver-badge" data-version>beta</span></a>
+    <a class="logo" href="#top" aria-label="FlowAlbum"><picture><source media="(prefers-color-scheme: light)" srcset="assets/flowalbum-wordmark.webp"><img src="assets/flowalbum-wordmark-dark.webp" alt="FlowAlbum" height="24"></picture> <span class="ver-badge" data-version>beta</span></a>
     <nav aria-label="Sections">
       <a href="#watch" data-i18n="nav_watch">Watch</a>
       <a href="#download" data-i18n="nav_download">Download</a>
@@ -33,8 +34,9 @@
 
 <section class="hero wrap" id="watch">
   <div class="hero-text">
+    <picture class="hero-logo"><source media="(prefers-color-scheme: light)" srcset="assets/flowalbum-lockup.webp"><img src="assets/flowalbum-lockup-dark.webp" alt="FlowAlbum: your stories, redesigned in a click." width="440"></picture>
     <h1 data-i18n="hero_h1">Design a printed photo album in an evening</h1>
-    <p class="lead" data-i18n="hero_lead">Album Designer arranges your photos into stories and pages with Claude's help, and every detail stays yours to change. Your photos stay on your computer.</p>
+    <p class="lead" data-i18n="hero_lead">FlowAlbum arranges your photos into stories and pages with Claude's help, and every detail stays yours to change. Your photos stay on your computer.</p>
   </div>
   <div class="hero-video"><video controls preload="metadata" playsinline poster="media/first-album.webp"><source src="media/first-album.mp4" type="video/mp4"></video>
     <p class="vcap" data-i18n="vc_quick">Watch a whole quick album in under a minute</p></div>
@@ -75,23 +77,23 @@
     <li data-for="mac">
       <figure class="shot"><a href="media/install-1-run-mac.webp" target="_blank" rel="noopener"><img src="media/install-1-run-mac.webp" alt="" data-i18n-alt="alt_i1m" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s1m_h">1. Install and open the app</h3>
-      <p data-i18n-html="s1m_p">Open the file you downloaded and drag <b>Album Designer</b> onto <b>Applications</b>. Then open it from Applications. During the beta the app isn't signed with an Apple account yet, so the Mac says it <b>"Not Opened"</b>: click <b>Done</b>. Open <b>System Settings › Privacy &amp; Security</b>, scroll down, click <b>Open Anyway</b> next to Album Designer and confirm with your password or Touch ID. You only do this the first time.</p>
-      <details class="fine"><summary data-i18n="s1m_t">Doesn't work? Use Terminal</summary><p data-i18n-html="s1m_tp">Open <b>Terminal</b>, paste this line and press Return, then open the app again: <code>xattr -dr com.apple.quarantine "/Applications/Album Designer.app"</code></p></details></div>
+      <p data-i18n-html="s1m_p">Open the file you downloaded and drag <b>FlowAlbum</b> onto <b>Applications</b>. Then open it from Applications. During the beta the app isn't signed with an Apple account yet, so the Mac says it <b>"Not Opened"</b>: click <b>Done</b>. Open <b>System Settings › Privacy &amp; Security</b>, scroll down, click <b>Open Anyway</b> next to FlowAlbum and confirm with your password or Touch ID. You only do this the first time.</p>
+      <details class="fine"><summary data-i18n="s1m_t">Doesn't work? Use Terminal</summary><p data-i18n-html="s1m_tp">Open <b>Terminal</b>, paste this line and press Return, then open the app again: <code>xattr -dr com.apple.quarantine "/Applications/FlowAlbum.app"</code></p></details></div>
     </li>
     <li>
       <figure class="shot"><a href="media/install-2-key.webp" target="_blank" rel="noopener"><img src="media/install-2-key.webp" alt="" data-i18n-alt="alt_i2" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s2_h">2. Connect Claude (optional)</h3>
-      <p data-i18n-html="s2_p">Album Designer opens in your browser. To let Claude read your photos and chat with you, open <b>Settings › App</b>, paste your Claude key into <b>Anthropic API key</b> and save. You can skip this: layouts work without a key.</p></div>
+      <p data-i18n-html="s2_p">FlowAlbum opens in your browser. To let Claude read your photos and chat with you, open <b>Settings › App</b>, paste your Claude key into <b>Anthropic API key</b> and save. You can skip this: layouts work without a key.</p></div>
     </li>
     <li data-for="win">
       <figure class="shot"><a href="media/install-3-add.webp" target="_blank" rel="noopener"><img src="media/install-3-add.webp" alt="" data-i18n-alt="alt_i3" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s3_h">3. Add photos</h3>
-      <p data-i18n-html="s3_p">Drag your photos into the window. Next time, open Album Designer from the Start menu. To close it, right-click its icon by the clock and choose <b>Quit</b>.</p></div>
+      <p data-i18n-html="s3_p">Drag your photos into the window. Next time, open FlowAlbum from the Start menu. To close it, right-click its icon by the clock and choose <b>Quit</b>.</p></div>
     </li>
     <li data-for="mac">
       <figure class="shot"><a href="media/install-3-add.webp" target="_blank" rel="noopener"><img src="media/install-3-add.webp" alt="" data-i18n-alt="alt_i3" width="1280" height="800" loading="lazy" decoding="async"></a></figure>
       <div class="stext"><h3 data-i18n="s3_h">3. Add photos</h3>
-      <p data-i18n-html="s3m_p">Drag your photos into the window. Next time, open Album Designer from Applications. If macOS asks to let it use your Documents folder, click <b>Allow</b>. To close it, click its small icon in the menu bar at the top right and choose <b>Quit</b>.</p></div>
+      <p data-i18n-html="s3m_p">Drag your photos into the window. Next time, open FlowAlbum from Applications. If macOS asks to let it use your Documents folder, click <b>Allow</b>. To close it, click its small icon in the menu bar at the top right and choose <b>Quit</b>.</p></div>
     </li>
   </ol>
 
@@ -228,7 +230,7 @@
 <section class="wrap" id="faq">
   <h2 data-i18n="faq_h">Questions</h2>
   <details><summary data-i18n="faq1_q">Do I need Lightroom?</summary><p data-i18n="faq1_a">No. Drag in JPEGs. The Lightroom plugin is for photographers who edit there and want the album to follow their changes.</p></details>
-  <details><summary data-i18n="faq2_q">Where do my photos go?</summary><p data-i18n="faq2_a">Albums are stored on your computer, in Documents › Album Designer. When you add a Claude key, small copies of your photos are sent to Anthropic so Claude can read them. Nothing else leaves your computer.</p></details>
+  <details><summary data-i18n="faq2_q">Where do my photos go?</summary><p data-i18n="faq2_a">Albums are stored on your computer, in Documents › FlowAlbum. When you add a Claude key, small copies of your photos are sent to Anthropic so Claude can read them. Nothing else leaves your computer.</p></details>
   <details><summary data-i18n="faq3_q">What does Claude cost?</summary><p data-i18n="faq3_a">You pay Anthropic directly for what you use, with your own key. Reading 100 photos costs about three cents with the default model. The app shows an estimate of what you have spent.</p></details>
   <details><summary data-i18n="faq4_q">Is it safe to click "Run anyway"?</summary><p data-i18n="faq4_a">Windows warns about every app that isn't signed with a paid certificate. During the beta the installer isn't signed. Download it only from this page.</p></details>
   <details><summary data-i18n="faq4m_q">Is it safe to click "Open Anyway" on a Mac?</summary><p data-i18n="faq4m_a">The Mac warns about every app that isn't signed through Apple's paid developer program. During the beta the app isn't signed. Download it only from this page.</p></details>
@@ -241,7 +243,7 @@
 <footer class="foot">
   <div class="wrap">
     <p data-i18n="foot_privacy">Privacy: this website collects nothing about you except what you type into the feedback box. The app checks this site once a day for a newer version number and sends nothing about you.</p>
-    <p class="fine" data-i18n="foot_marks">Album Designer is an independent project. Blurb and Adobe Lightroom are trademarks of their owners.</p>
+    <p class="fine" data-i18n="foot_marks">FlowAlbum is an independent project. Blurb and Adobe Lightroom are trademarks of their owners.</p>
     <p class="fine"><span data-version>beta</span> · <a href="https://github.com/shnarch/album-designer-site/releases" data-i18n="notes_all2">All versions</a></p>
   </div>
 </footer>

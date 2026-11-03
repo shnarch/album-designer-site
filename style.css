@@ -27,7 +27,9 @@ section.wrap { padding-top: 64px; padding-bottom: 8px; }
 .nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .nav-in { display: flex; align-items: center; gap: 22px; height: 58px; }
 .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--fg); text-decoration: none; white-space: nowrap; }
-.logo img { border-radius: 6px; }
+.logo img { display: block; }
+.hero-logo { display: block; margin: 0 0 22px; }
+.hero-logo img { max-width: min(440px, 100%); height: auto; display: block; }
 .ver-badge { font-size: 11px; font-weight: 400; color: var(--muted); }
 .nav nav { display: flex; gap: 18px; margin-inline-start: auto; }
 .nav nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
