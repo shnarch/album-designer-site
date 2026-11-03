@@ -11,17 +11,6 @@
   "file": "intro"
  },
  {
-  "id": "first-album",
-  "category": "Getting started",
-  "persona": "quick",
-  "youtube": null,
-  "title": {
-   "en": "Your first album, step by step",
-   "he": "האלבום הראשון שלכם, צעד אחר צעד"
-  },
-  "file": "first-album"
- },
- {
   "id": "install-claude-key",
   "category": "Getting started",
   "persona": "quick",
@@ -121,6 +110,17 @@
   "file": "qr-video"
  },
  {
+  "id": "print-size",
+  "category": "Design",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "See your album at its real printed size",
+   "he": "רואים את האלבום בגודל ההדפסה האמיתי"
+  },
+  "file": "print-size"
+ },
+ {
   "id": "ask-claude",
   "category": "Claude",
   "persona": "pro",
@@ -130,6 +130,39 @@
    "he": "מבקשים מ-Claude"
   },
   "file": "ask-claude"
+ },
+ {
+  "id": "api-key",
+  "category": "Claude",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Create a Claude API key",
+   "he": "יוצרים מפתח API של Claude"
+  },
+  "file": "api-key"
+ },
+ {
+  "id": "add-credit",
+  "category": "Claude",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Add credit for Claude",
+   "he": "מוסיפים קרדיט ל-Claude"
+  },
+  "file": "add-credit"
+ },
+ {
+  "id": "credit-ring",
+  "category": "Claude",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Your Claude credit ring",
+   "he": "טבעת הקרדיט של Claude"
+  },
+  "file": "credit-ring"
  },
  {
   "id": "lightroom",
