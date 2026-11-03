@@ -28,8 +28,10 @@ section.wrap { padding-top: 64px; padding-bottom: 8px; }
 .nav-in { display: flex; align-items: center; gap: 22px; height: 58px; }
 .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--fg); text-decoration: none; white-space: nowrap; }
 .logo img { display: block; }
-.hero-logo { display: block; margin: 0 0 22px; }
-.hero-logo img { max-width: min(440px, 100%); height: auto; display: block; }
+.hero-logo { display: flex; align-items: center; gap: 14px; margin: 0 0 22px; }
+.hero-logo picture { display: block; }
+.hero-logo img { display: block; height: 84px; width: auto; max-width: 100%; }   /* the book is as tall as the name and slogan beside it */
+@media (max-width: 520px) { .hero-logo img { height: 62px; } }
 .ver-badge { font-size: 11px; font-weight: 400; color: var(--muted); }
 .nav nav { display: flex; gap: 18px; margin-inline-start: auto; }
 .nav nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
