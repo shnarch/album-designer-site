@@ -3,5 +3,5 @@
 window.SITE_CONFIG = {
   FEEDBACK_URL: "",
   TURNSTILE_SITEKEY: "",
-  RELEASES: "https://github.com/shnarch/album-designer-site/releases"
+  RELEASES: "https://github.com/shnarch/flowalbum/releases"
 };

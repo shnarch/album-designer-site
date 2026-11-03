@@ -1,6 +1,6 @@
 # FlowAlbum: website and downloads
 
-The public website for FlowAlbum (https://shnarch.github.io/album-designer-site/) and the page where
+The public website for FlowAlbum (https://shnarch.github.io/flowalbum/) and the page where
 its installers are published (Releases). The app's code lives in a private repository.
 
 - `index.html`, `style.css`, `site.js`, `i18n.js`: the page (English and Hebrew; no build step).

@@ -1,9 +1,9 @@
 {
  "version": "3.1.0",
  "released": "2026-11-03",
- "windows": "https://github.com/shnarch/album-designer-site/releases/download/v3.1.0/FlowAlbum-Setup-3.1.0.exe",
- "mac": "https://github.com/shnarch/album-designer-site/releases/download/v3.1.0/FlowAlbum-3.1.0-apple-silicon.dmg",
- "mac_intel": "https://github.com/shnarch/album-designer-site/releases/download/v3.1.0/FlowAlbum-3.1.0-intel.dmg",
+ "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.1.0/FlowAlbum-Setup-3.1.0.exe",
+ "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.1.0/FlowAlbum-3.1.0-apple-silicon.dmg",
+ "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.1.0/FlowAlbum-3.1.0-intel.dmg",
  "notes": [
   "The app is now called FlowAlbum, with a new logo, the slogan \"Your stories, redesigned in a click\" and a new app icon",
   "Photos is a screen of its own for organizing photos, with a Pages button that peeks at a story's pages, and a calm Design album strip with the split slider",
