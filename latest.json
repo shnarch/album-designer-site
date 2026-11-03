@@ -1,13 +1,13 @@
 {
- "version": "2.2.0",
- "released": "2026-11-01",
- "windows": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-Setup-2.2.0.exe",
- "mac": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-2.2.0-apple-silicon.dmg",
- "mac_intel": "https://github.com/shnarch/album-designer-site/releases/download/v2.2.0/Album-Designer-2.2.0-intel.dmg",
+ "version": "3.1.0",
+ "released": "2026-11-03",
+ "windows": "https://github.com/shnarch/album-designer-site/releases/download/v3.1.0/FlowAlbum-Setup-3.1.0.exe",
+ "mac": "https://github.com/shnarch/album-designer-site/releases/download/v3.1.0/FlowAlbum-3.1.0-apple-silicon.dmg",
+ "mac_intel": "https://github.com/shnarch/album-designer-site/releases/download/v3.1.0/FlowAlbum-3.1.0-intel.dmg",
  "notes": [
-  "Lock single pages: each page has its own padlock (press L), and locked pages are never redesigned, even when you add or remove photos",
-  "Easier editing on the spread: guides for equal spacing, select photos across both pages as one group, crop by double-click, and one undo history for edits and views",
-  "Page gaps for a single page, spread or story, plus new chat tools so Claude can change gaps, page colour and photo places",
-  "Duplicate an album from All albums, reopen the album on the page you left, and pick a second alternative by hand"
+  "The app is now called FlowAlbum, with a new logo, the slogan \"Your stories, redesigned in a click\" and a new app icon",
+  "Photos is a screen of its own for organizing photos, with a Pages button that peeks at a story's pages, and a calm Design album strip with the split slider",
+  "A tag bar that floats above the photos you select: move it, resize it, and see each shortcut letter (Alternatives is now A)",
+  "Rename an album by double-clicking its name or with the pencil in All albums; its folder is renamed to match"
  ]
 }
