@@ -177,3 +177,8 @@ figure.shot { margin-bottom: 0; }
 .steps details { margin-top: 10px; }
 .btn[data-dl-mac-intel] { border: 2px solid var(--accent); padding: 10px 19px; }
 .btn[data-dl-mac-intel]:hover { background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+.plugin { margin-top: 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
+.plugin p { margin: 0 0 10px; }
+.plugin ol { margin: 0 0 10px; padding-inline-start: 22px; font-size: 15px; color: var(--muted); }
+.plugin li { margin: 4px 0; }
+.plugin .fine { font-size: 14px; }
