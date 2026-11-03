@@ -16,8 +16,8 @@
   "persona": "quick",
   "youtube": null,
   "title": {
-   "en": "Your first album in 10 minutes",
-   "he": "האלבום הראשון שלכם ב-10 דקות"
+   "en": "Your first album, step by step",
+   "he": "האלבום הראשון שלכם, צעד אחר צעד"
   },
   "file": "first-album"
  },
@@ -27,29 +27,30 @@
   "persona": "quick",
   "youtube": null,
   "title": {
-   "en": "Install and connect Claude",
-   "he": "התקנה וחיבור ל-Claude"
+   "en": "Install FlowAlbum and connect Claude",
+   "he": "התקנת FlowAlbum וחיבור ל-Claude"
   },
   "file": "install-claude-key"
  },
  {
-  "id": "arrange-groups",
-  "category": "Arrange",
+  "id": "photos-groups",
+  "category": "Photos",
   "persona": "quick",
   "youtube": null,
   "title": {
-   "en": "Groups and stories in Arrange",
-   "he": "קבוצות וסיפורים בסידור"
-  }
+   "en": "Groups and stories in Photos",
+   "he": "קבוצות וסיפורים בלשונית Photos"
+  },
+  "file": "photos-groups"
  },
  {
   "id": "duplicates-alternatives",
-  "category": "Arrange",
+  "category": "Photos",
   "persona": "pro",
   "youtube": null,
   "title": {
    "en": "Duplicates and alternatives",
-   "he": "כפילויות ותמונות חלופיות"
+   "he": "כפילויות וחלופות"
   },
   "file": "duplicates-alternatives"
  },
@@ -76,14 +77,59 @@
   "file": "ai-lock"
  },
  {
+  "id": "edit-photo",
+  "category": "Design",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Edit photos without leaving the app",
+   "he": "עריכת תמונות בלי לצאת מהתוכנה"
+  },
+  "file": "edit-photo"
+ },
+ {
+  "id": "cover-text",
+  "category": "Design",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Design the cover",
+   "he": "מעצבים את הכריכה"
+  },
+  "file": "cover-text"
+ },
+ {
   "id": "hebrew-rtl",
   "category": "Design",
   "persona": "pro",
   "youtube": null,
   "title": {
-   "en": "Hebrew albums (right to left)",
-   "he": "אלבומים בעברית (מימין לשמאל)"
-  }
+   "en": "Hebrew albums, right to left",
+   "he": "אלבומים בעברית: מימין לשמאל"
+  },
+  "file": "hebrew-rtl"
+ },
+ {
+  "id": "qr-video",
+  "category": "Design",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "A QR code for your video",
+   "he": "קוד QR לסרטון"
+  },
+  "file": "qr-video"
+ },
+ {
+  "id": "ask-claude",
+  "category": "Claude",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Ask Claude",
+   "he": "מבקשים מ-Claude"
+  },
+  "file": "ask-claude"
  },
  {
   "id": "lightroom",
@@ -93,7 +139,19 @@
   "title": {
    "en": "Publish from Lightroom Classic",
    "he": "פרסום מ-Lightroom Classic"
-  }
+  },
+  "file": "lightroom"
+ },
+ {
+  "id": "check-print",
+  "category": "Export",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Check before you print",
+   "he": "בודקים לפני ההדפסה"
+  },
+  "file": "check-print"
  },
  {
   "id": "export-blurb",
@@ -101,9 +159,10 @@
   "persona": "pro",
   "youtube": null,
   "title": {
-   "en": "Export print files for your print provider",
-   "he": "ייצוא קבצים להדפסה אצל בית הדפוס שלכם"
-  }
+   "en": "Export for your print provider",
+   "he": "ייצוא לבית הדפוס שלכם"
+  },
+  "file": "export-blurb"
  },
  {
   "id": "share-proof",
@@ -112,7 +171,41 @@
   "youtube": null,
   "title": {
    "en": "Share a proof and collect comments",
-   "he": "שיתוף הדפסת מבחן ואיסוף הערות"
-  }
+   "he": "שיתוף הוכחה ואיסוף הערות"
+  },
+  "file": "share-proof"
+ },
+ {
+  "id": "shortcuts",
+  "category": "Tips",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Work faster with shortcuts",
+   "he": "עובדים מהר עם קיצורי מקשים"
+  },
+  "file": "shortcuts"
+ },
+ {
+  "id": "manage-albums",
+  "category": "Tips",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Your albums, in one place",
+   "he": "האלבומים שלכם במקום אחד"
+  },
+  "file": "manage-albums"
+ },
+ {
+  "id": "appearance",
+  "category": "Tips",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Dark or light: your choice",
+   "he": "כהה או בהיר: לפי בחירתכם"
+  },
+  "file": "appearance"
  }
 ]
