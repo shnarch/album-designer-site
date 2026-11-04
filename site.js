@@ -164,7 +164,7 @@
       const res = await fetch(CFG.FEEDBACK_URL, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ type: data.get("type"), message, email: String(data.get("email") || "").trim(),
-          website: data.get("website") || "", token: tsToken, lang, version: latest?.version || "", page: location.href.split("#")[0] }),
+          token: tsToken, lang, version: latest?.version || "", page: location.href.split("#")[0] }),
       });
       if (!res.ok) throw new Error(res.status);
       form.reset(); say("f_ok", true);

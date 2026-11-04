@@ -118,7 +118,6 @@ details p { margin: 10px 0 0; color: var(--muted); }
 .types input { accent-color: var(--accent); }
 .fld { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
 .fld textarea, .fld input { background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font: inherit; width: 100%; }
-.hp { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; opacity: 0; }
 .fb-row { display: flex; align-items: center; gap: 14px; }
 #fb-status.ok { color: var(--ok); } #fb-status.bad { color: var(--bad); }
 
