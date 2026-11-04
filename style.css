@@ -149,7 +149,6 @@ figure.shot a:hover img { border-color: var(--accent); }
 /* big pictures: the first video fills the page width, every step is a row with its picture on the larger side */
 .hero-video { margin-top: 34px; }
 .hero-video video { aspect-ratio: 16 / 10; width: 100%; }
-.vcap { margin: 8px 0 0; font-size: 15px; color: var(--muted); }
 .steps, .gsteps { display: block; margin-top: 30px; }
 .steps > li, .gsteps > li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 34px; align-items: center; margin: 0 0 40px; }
 .stext h3 { font-size: 21px; margin-bottom: 8px; }
