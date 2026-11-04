@@ -40,11 +40,11 @@ export default {
       if (!ok.success) return reply(403, { error: "bot check failed" });
     }
 
-    if (env.RATE) {                                                         // optional: 5 messages per hour per visitor (KV namespace RATE)
+    if (env.RATE) {                                                         // optional: 10 messages per hour per visitor (KV namespace RATE)
       const ip = request.headers.get("CF-Connecting-IP") || "unknown";
       const key = `rate:${ip}:${new Date().toISOString().slice(0, 13)}`;
       const n = parseInt((await env.RATE.get(key)) || "0", 10);
-      if (n >= 5) return reply(429, { error: "too many messages, try later" });
+      if (n >= 10) return reply(429, { error: "too many messages, try later" });
       await env.RATE.put(key, String(n + 1), { expirationTtl: 3700 });
     }
 
