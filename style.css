@@ -14,11 +14,14 @@ body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system
 a { color: var(--link); }
 h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; font-weight: 600; }
 h1 { font-size: clamp(30px, 5vw, 48px); letter-spacing: -.01em; }
-h2 { font-size: 28px; margin-top: 0; }
+h2 { font-size: clamp(32px, 4.2vw, 42px); font-weight: 700; letter-spacing: -.01em; margin-top: 0; margin-bottom: .45em; }
 h3 { font-size: 17px; }
 p { margin: 0 0 .8em; }
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 section.wrap { padding-top: 64px; padding-bottom: 8px; }
+/* each section after the first starts with room above its title and a thin line, so the sections are easy to tell apart */
+section.wrap:not(.hero) { position: relative; padding-top: 104px; padding-bottom: 16px; scroll-margin-top: -80px; }
+section.wrap:not(.hero)::before { content: ""; position: absolute; top: 44px; left: 20px; right: 20px; height: 1px; background: var(--line); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .fine { font-size: 13px; color: var(--muted); }
 .lead { font-size: 18px; color: var(--muted); max-width: 52ch; }
