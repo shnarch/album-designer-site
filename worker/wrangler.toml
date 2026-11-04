@@ -1,9 +1,9 @@
-name = "album-designer-feedback"
+name = "flowalbum-feedback"
 main = "index.js"
 compatibility_date = "2024-11-01"
 
 [vars]
-GITHUB_REPO = "shnarch/album-designer"
+GITHUB_REPO = "shnarch/flowalbum-app"
 ALLOWED_ORIGINS = "https://shnarch.github.io"
 
 # Optional (see README): a KV namespace to limit each visitor to 5 messages an hour.

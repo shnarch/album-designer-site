@@ -63,7 +63,7 @@ export default {
       headers: {
         "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
         "Accept": "application/vnd.github+json",
-        "User-Agent": "album-designer-feedback",
+        "User-Agent": "flowalbum-feedback",
         "X-GitHub-Api-Version": "2022-11-28",
       },
       body: JSON.stringify({ title: `[Website] ${firstLine}`, body, labels: [type.label, "from-website"] }),

@@ -1,13 +1,13 @@
 # Feedback relay
 
-The website's feedback box posts here; this makes an issue in the private `shnarch/album-designer` repo
+The website's feedback box posts here; this makes an issue in the private `shnarch/flowalbum-app` repo
 with the label `bug`, `feat` or `question`, plus `from-website`. Free on Cloudflare's Workers plan.
 
 ## One-time setup (about 10 minutes)
 
 1. **A GitHub token that can only write issues in one repo.** GitHub › Settings › Developer settings ›
    Fine-grained tokens › Generate new token. Resource owner: you. Repository access: **Only select
-   repositories › album-designer**. Permissions: **Issues: Read and write** (nothing else). Copy the token.
+   repositories › flowalbum-app**. Permissions: **Issues: Read and write** (nothing else). Copy the token.
 2. **A free Cloudflare account** at cloudflare.com (no domain needed).
 3. In a terminal (needs Node.js):
    ```bash
@@ -16,8 +16,16 @@ with the label `bug`, `feat` or `question`, plus `from-website`. Free on Cloudfl
    npx wrangler secret put GITHUB_TOKEN      # paste the token from step 1
    npx wrangler deploy
    ```
-   `deploy` prints an address like `https://album-designer-feedback.<you>.workers.dev`.
+   `deploy` prints an address like `https://flowalbum-feedback.<you>.workers.dev`.
 4. Put that address in `config.js` as `FEEDBACK_URL`, commit and push. The feedback box is now live.
+
+### Without a terminal or Node.js
+
+In the Cloudflare dashboard: **Workers & Pages › Create › Create Worker**, name it `flowalbum-feedback`, deploy,
+then **Edit code**, paste the whole of `index.js` over the sample and deploy again. Under **Settings › Variables
+and Secrets** add: `GITHUB_REPO` = `shnarch/flowalbum-app`, `ALLOWED_ORIGINS` = `https://shnarch.github.io`
+(both as text) and `GITHUB_TOKEN` = the token from step 1 (as a secret). The worker's address is shown at the
+top of its page: use it as in step 4.
 
 ## Optional hardening
 
