@@ -53,13 +53,18 @@
   showOs(savedOs || (/Mac/.test(navigator.platform || "") && !/iPhone|iPad/.test(navigator.userAgent) ? "mac" : "win"));
 
   // ------------------------------------------------------------ personas ----
-  function showPersona(p) {
-    p = p === "pro" ? "pro" : "quick";
-    $$("[data-persona]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.persona === p)));
+  function showPersona(p) {                      // "" = neither: both guides closed
+    p = p === "pro" || p === "quick" ? p : "";
+    $$("[data-persona]").forEach((b) => b.setAttribute("aria-expanded", String(b.dataset.persona === p)));
     $("#guide-quick").hidden = p !== "quick";
     $("#guide-pro").hidden = p !== "pro";
   }
-  $$("[data-persona]").forEach((b) => b.addEventListener("click", () => { showPersona(b.dataset.persona); history.replaceState(null, "", "#" + b.dataset.persona); }));
+  $$("[data-persona]").forEach((b) => b.addEventListener("click", () => {
+    const p = b.getAttribute("aria-expanded") === "true" ? "" : b.dataset.persona;       // clicking the open one closes it
+    showPersona(p);
+    history.replaceState(null, "", p ? "#" + p : location.pathname + location.search);
+    if (p) $("#guides").scrollIntoView();                                                  // the question stays on top, the guide opens below it
+  }));
   function fromHash() {
     const h = location.hash.slice(1);
     if (h === "quick" || h === "pro") { showPersona(h); $("#guides").scrollIntoView(); }
