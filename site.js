@@ -146,7 +146,8 @@
   if (CFG.TURNSTILE_SITEKEY) {
     const s = document.createElement("script");
     s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js"; s.async = true;
-    s.onload = () => window.turnstile && window.turnstile.render("#ts", { sitekey: CFG.TURNSTILE_SITEKEY, callback: (tok) => (tsToken = tok) });
+    s.onload = () => window.turnstile && window.turnstile.render("#ts", { sitekey: CFG.TURNSTILE_SITEKEY,
+      callback: (tok) => (tsToken = tok), "expired-callback": () => (tsToken = ""), "error-callback": () => (tsToken = "") });
     document.head.appendChild(s);
   }
   form.addEventListener("submit", async (e) => {
@@ -156,6 +157,7 @@
     const message = String(data.get("message") || "").trim();
     if (message.length < 10) return say("f_short", false);
     if (!CFG.FEEDBACK_URL) return say("f_off", false);
+    if (CFG.TURNSTILE_SITEKEY && !tsToken) return say("f_human", false);        // the human check has to be ticked for every message
     say("f_sending", true);
     form.querySelector("button[type=submit]").disabled = true;
     try {
@@ -166,8 +168,8 @@
       });
       if (!res.ok) throw new Error(res.status);
       form.reset(); say("f_ok", true);
-      if (window.turnstile) window.turnstile.reset();
-    } catch { say("f_err", false); }
+    } catch (err) { say(String(err.message) === "403" ? "f_human" : String(err.message) === "429" ? "f_many" : "f_err", false); }
+    tsToken = ""; if (window.turnstile) window.turnstile.reset();             // a token works once: the next message needs a fresh check
     form.querySelector("button[type=submit]").disabled = false;
   });
 

@@ -88,7 +88,7 @@ window.HE = {
   f_type: "מה זה?", f_bug: "משהו שבור", f_feat: "רעיון", f_q: "שאלה",
   f_msg: "מה קרה, או מה היה עוזר?", f_mail: "המייל שלכם (לא חובה, רק כדי שנוכל לענות)", f_send: "שליחה",
   f_fine: "נא לא לשלוח סיסמאות או את מפתח ה-Claude. גרסת הדף והשפה מצורפות כדי לעזור לשחזר בעיות.",
-  f_ok: "תודה, זה נקלט.", f_err: "השליחה נכשלה. נסו שוב בעוד רגע.", f_short: "כתבו לפחות כמה מילים.", f_off: "תיבת המשוב עדיין לא פעילה.", f_sending: "שולח…",
+  f_human: "סמנו את התיבה \"אימות שאתם בני אדם\" ושלחו שוב.", f_many: "יותר מדי הודעות בשעה האחרונה. נסו שוב מאוחר יותר.", f_ok: "תודה, זה נקלט.", f_err: "השליחה נכשלה. נסו שוב בעוד רגע.", f_short: "כתבו לפחות כמה מילים.", f_off: "תיבת המשוב עדיין לא פעילה.", f_sending: "שולח…",
   faq_h: "שאלות",
   faq1_q: "צריך Lightroom?", faq1_a: "לא. גוררים קובצי JPEG. התוסף ל-Lightroom מיועד לצלמים שעורכים שם ורוצים שהאלבום יעקוב אחרי השינויים.",
   faq2_q: "לאן התמונות שלי הולכות?", faq2_a: "האלבומים נשמרים במחשב שלכם, ב-Documents › FlowAlbum. כשמוסיפים מפתח Claude, עותקים קטנים של התמונות נשלחים ל-Anthropic כדי ש-Claude יוכל לקרוא אותם. שום דבר אחר לא יוצא מהמחשב.",
@@ -102,7 +102,7 @@ window.HE = {
 };
 window.EN = {
   lb_close: "Close (Esc)", lb_prev: "Previous", lb_next: "Next", v_play: "Play",
-  v_all: "All", v_soon: "Coming soon", f_ok: "Thanks, it's logged.", f_err: "Couldn't send that. Try again in a moment.",
+  v_all: "All", v_soon: "Coming soon", f_human: "Please tick \u201cVerify you are human\u201d, then send.", f_many: "That is a lot of messages for one hour. Try again later.", f_ok: "Thanks, it's logged.", f_err: "Couldn't send that. Try again in a moment.",
   f_short: "Write at least a few words.", f_off: "The feedback box isn't switched on yet.", f_sending: "Sending…", v_released: "Released", v_beta: "beta"
 };
 
