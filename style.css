@@ -163,11 +163,11 @@ figure.shot { margin-bottom: 0; }
 .gvideo figcaption { font-size: 15px; }
 /* the guides (videos): small cards, three to a row; a click opens the video large in the page */
 .vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.vcard h3 { font-size: 15px; }
+.vcard .fine { margin-top: 8px; }
 .vcard[data-video] { cursor: pointer; }
 .vbtn { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; aspect-ratio: 16 / 10; border-radius: var(--radius); }
 .vbtn img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); background: #000; transition: border-color .15s, filter .15s; }
-.vbtn .play { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; font-size: 17px; opacity: .92; box-shadow: 0 4px 14px rgba(0, 0, 0, .45); transition: transform .15s; }
+.vbtn .play { position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; font-size: 15px; opacity: .92; box-shadow: 0 4px 14px rgba(0, 0, 0, .45); transition: transform .15s; }
 .vcard:hover .vbtn img { border-color: var(--accent); filter: brightness(1.08); }
 .vcard:hover .vbtn .play { transform: scale(1.1); }
 .vbtn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }

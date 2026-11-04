@@ -83,7 +83,7 @@
         : v.youtube
         ? `<a class="ph vthumb" href="https://www.youtube-nocookie.com/embed/${v.youtube}" target="_blank" rel="noopener"><span class="play">▶</span></a>`
         : `<div class="ph vthumb" aria-hidden="true"><span class="play">▶</span><small>${t("v_soon")}</small></div>`;
-      return `<article class="vcard"${v.file ? ` data-video="${v.id}"` : ""}>${media}<h3>${title}</h3><p class="fine">${label(v.category)} · ${tag}</p></article>`;
+      return `<article class="vcard"${v.file ? ` data-video="${v.id}"` : ""}>${media}<p class="fine">${label(v.category)} · ${tag}</p></article>`;
     }).join("");
   }
 
