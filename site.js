@@ -86,6 +86,59 @@
     }).join("");
   }
 
+  // ------------------------------------------------------------ lightbox ----
+  // Screenshots, and the two Claude set-up videos linked from the install steps, open in a window inside the page:
+  // Esc, a click outside, or the ✕ closes it, and the visitor is still on the same page (no new tab, no history entry).
+  const lb = document.createElement("dialog");
+  lb.className = "lightbox";
+  lb.innerHTML = '<button type="button" class="lb-close" data-lb="close">✕</button><button type="button" class="lb-nav lb-prev" data-lb="prev">‹</button>' +
+    '<div class="lb-stage"></div><p class="lb-cap"></p><button type="button" class="lb-nav lb-next" data-lb="next">›</button>';
+  document.body.appendChild(lb);
+  let lbList = [], lbAt = 0;
+  const lbStage = lb.querySelector(".lb-stage"), lbCap = lb.querySelector(".lb-cap");
+  function lbLabels(title) {
+    lb.setAttribute("aria-label", title || "");
+    lb.querySelector(".lb-close").setAttribute("aria-label", t("lb_close")); lb.querySelector(".lb-close").title = t("lb_close");
+    lb.querySelector(".lb-prev").setAttribute("aria-label", t("lb_prev")); lb.querySelector(".lb-next").setAttribute("aria-label", t("lb_next"));
+  }
+  function lbOpen() { if (!lb.open) { lb.showModal(); document.documentElement.classList.add("lb-open"); } }
+  function lbShow(i) {
+    lbAt = (i + lbList.length) % lbList.length;
+    const a = lbList[lbAt], img = a.querySelector("img"), alt = (img && img.alt) || "";
+    lbStage.innerHTML = ""; const big = document.createElement("img"); big.src = a.getAttribute("href"); big.alt = alt; lbStage.appendChild(big);
+    lbCap.textContent = alt; lbLabels(alt);
+    lb.querySelectorAll(".lb-nav").forEach((b) => (b.hidden = lbList.length < 2));
+    lbOpen();
+  }
+  function lbVideo(id) {
+    const v = videos.find((x) => x.id === id), file = (v && v.file) || id, title = v ? (v.title[lang] || v.title.en) : "";
+    lbList = [];
+    lbStage.innerHTML = `<video controls autoplay playsinline poster="media/${file}.webp"><source src="media/${file}.mp4" type="video/mp4"></video>`;
+    lbCap.textContent = title; lbLabels(title);
+    lb.querySelectorAll(".lb-nav").forEach((b) => (b.hidden = true));
+    lbOpen();
+  }
+  lb.addEventListener("close", () => { lbStage.innerHTML = ""; document.documentElement.classList.remove("lb-open"); });   // also stops a playing video
+  lb.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-lb]");
+    if (b) { if (b.dataset.lb === "close") lb.close(); else lbShow(lbAt + (b.dataset.lb === "next" ? 1 : -1)); return; }
+    if (e.target === lb || e.target.closest(".lb-stage img")) lb.close();       // the dark area or the picture itself
+  });
+  lb.addEventListener("keydown", (e) => {
+    if (lbList.length > 1 && (e.key === "ArrowRight" || e.key === "ArrowLeft")) { e.preventDefault(); lbShow(lbAt + (e.key === "ArrowRight" ? 1 : -1)); }
+  });
+  document.addEventListener("click", (e) => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;   // a new tab on purpose: let the browser do it
+    const vl = e.target.closest("[data-video]");
+    if (vl) { e.preventDefault(); lbVideo(vl.dataset.video); return; }
+    const shot = e.target.closest(".shot a");
+    if (shot) {
+      e.preventDefault();
+      lbList = $$(".shot a", shot.closest("ol") || document).filter((a) => a.offsetParent !== null);      // the visible screenshots of this list
+      lbShow(Math.max(0, lbList.indexOf(shot)));
+    }
+  });
+
   // ------------------------------------------------------------ feedback ----
   const form = $("#fb"), status = $("#fb-status");
   let tsToken = "";

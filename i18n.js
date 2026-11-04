@@ -53,6 +53,7 @@ window.HE = {
   s2_p: "FlowAlbum נפתח בדפדפן. כדי ש-Claude יקרא את התמונות וישוחח איתכם, פותחים <b>Settings › App</b>, מדביקים את מפתח ה-Claude בשדה <b>Anthropic API key</b> ושומרים. אפשר לדלג: סידור העמודים עובד גם בלי מפתח.",
   s3_h: "3. מוסיפים תמונות",
   s3_p: "גוררים את התמונות לחלון. בפעם הבאה פותחים את FlowAlbum מתפריט התחל. כדי לסגור, לוחצים קליק ימני על הסמל ליד השעון ובוחרים <b>Quit</b>.",
+  key_v: "מעדיפים לצפות? <a href=\"#videos\" data-video=\"api-key\">יוצרים מפתח API של Claude</a> · <a href=\"#videos\" data-video=\"add-credit\">מוסיפים קרדיט ל-Claude</a>",
   key_h: "איך משיגים מפתח Claude?",
   key_p: "נכנסים ל-<a href=\"https://console.anthropic.com\" rel=\"noopener\">console.anthropic.com</a>, מוסיפים כמה דולרים תחת <b>Billing</b>, ואז <b>API keys › Create key</b> ומעתיקים. אלבום שלם של 100 תמונות עולה בין כמה סנטים לדולר בערך, לפי המודל שבחרתם בהגדרות. שומרים את המפתח בסוד: הוא כמו סיסמה לקרדיט בחשבון Claude שלכם.",
   notes_h: "מה חדש", notes_all: "כל הגרסאות", notes_all2: "כל הגרסאות",
@@ -66,6 +67,8 @@ window.HE = {
   q3_h: "3. Design album", q3_p: "כפתור אחד הופך את הקבוצות לסיפורים ומעצב כל עמוד. סיפורים שכבר עיצבתם נשארים כמו שהם.",
   q4_h: "4. מעצבים מחדש בלחיצה", q4_p: "מעצבים מחדש עמוד, כפולה או סיפור בלחיצה אחת, או לוחצים R.",
   q5_h: "5. מייצאים", q5_p: "מייצאים PDF להדפסת מבחן לעיון, או קבצים מוכנים להדפסה עבור בית הדפוס שלכם.",
+  s2_v: "צריכים מפתח? צפו איך <a href=\"#videos\" data-video=\"api-key\">יוצרים מפתח API של Claude</a> ואיך <a href=\"#videos\" data-video=\"add-credit\">מוסיפים קרדיט ל-Claude</a>.",
+  lb_close: "סגירה (Esc)", lb_prev: "הקודם", lb_next: "הבא",
   lr_dl: "הורדת התוסף ל-Lightroom", lr_dl_note: "קובץ zip קטן, ל-Lightroom Classic.",
   lr_s1: "פותחים את הקובץ. ב-Lightroom Classic בוחרים <b>File › Plug-in Manager… › Add</b> ובוחרים את התיקייה <b>AlbumDesigner.lrplugin</b>.",
   lr_s2: "בחלונית <b>Publish Services</b> לוחצים <b>Set Up…</b> ליד FlowAlbum וכותבים את שם האלבום. FlowAlbum צריך להיות פתוח.",
@@ -100,6 +103,7 @@ window.HE = {
   v_released: "פורסם", v_beta: "בטא"
 };
 window.EN = {
+  lb_close: "Close (Esc)", lb_prev: "Previous", lb_next: "Next",
   v_all: "All", v_soon: "Coming soon", f_ok: "Thanks, it's logged.", f_err: "Couldn't send that. Try again in a moment.",
   f_short: "Write at least a few words.", f_off: "The feedback box isn't switched on yet.", f_sending: "Sending…", v_released: "Released", v_beta: "beta"
 };
