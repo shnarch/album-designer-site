@@ -62,14 +62,9 @@
   $$("[data-persona]").forEach((b) => b.addEventListener("click", () => {
     const p = b.getAttribute("aria-expanded") === "true" ? "" : b.dataset.persona;       // clicking the open one closes it
     showPersona(p);
-    history.replaceState(null, "", p ? "#" + p : location.pathname + location.search);
     if (p) $("#guides").scrollIntoView();                                                  // the question stays on top, the guide opens below it
   }));
-  function fromHash() {
-    const h = location.hash.slice(1);
-    if (h === "quick" || h === "pro") { showPersona(h); $("#guides").scrollIntoView(); }
-  }
-  window.addEventListener("hashchange", fromHash);
+  // Nothing in the address bar: the page always starts with both guides closed, until the visitor picks one.
 
   // -------------------------------------------------------------- videos ----
   fetch("videos.json").then((r) => r.json()).then((j) => { videos = j; renderVideos(); }).catch(() => {});
@@ -178,5 +173,4 @@
   // ---------------------------------------------------------------- start ----
   let saved = null; try { saved = localStorage.getItem("lang"); } catch {}
   setLang(saved || ((navigator.language || "").startsWith("he") ? "he" : "en"), false);
-  fromHash();
 })();

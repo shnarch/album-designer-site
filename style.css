@@ -74,25 +74,22 @@ details p { margin: 10px 0 0; color: var(--muted); }
 .notes { margin-top: 24px; } .notes ul { margin: 0 0 6px; padding-inline-start: 20px; color: var(--muted); }
 .mac-note { margin-top: 14px; }
 
+/* two big buttons: filled, raised, and pressing one opens its guide below */
 .personas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 18px; }
-.personas button { text-align: start; background: var(--panel); border: 2px solid var(--line); border-radius: var(--radius); padding: 22px 24px; color: var(--fg); font: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, background .15s; }
-.personas .ptitle { font-size: 26px; font-weight: 800; letter-spacing: -.01em; line-height: 1.15; }
-.personas button b { font-size: 16px; font-weight: 600; }
-.personas button > span:not(.ptitle):not(.pick) { color: var(--muted); font-size: 15px; }
-.personas button:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
-.personas button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.personas button[aria-expanded="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--panel)); }
-.pick { margin-top: 10px; font-size: 14px; font-weight: 700; color: var(--accent); }
-.pick-on, .pick-off { display: none; }
-.personas button[aria-expanded="true"] .pick-on, .personas button[aria-expanded="false"] .pick-off { display: inline; }
+.personas button { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 76px; padding: 18px 24px; border: 0; border-radius: 14px; background: var(--accent); color: var(--accent-fg); font: inherit; font-size: 24px; font-weight: 800; letter-spacing: -.01em; cursor: pointer;
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--accent) 55%, #000), 0 10px 24px rgba(0, 0, 0, .2); transition: transform .12s, box-shadow .12s, filter .12s; }
+.personas button::after { content: "▾"; font-size: 20px; transition: transform .2s; }
+.personas button[data-persona="pro"] { background: var(--blue); box-shadow: 0 4px 0 color-mix(in srgb, var(--blue) 55%, #000), 0 10px 24px rgba(0, 0, 0, .2); }
+.personas button:hover { filter: brightness(1.08); transform: translateY(-2px); }
+.personas button:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0, 0, 0, .3); }
+.personas button:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+.personas button[aria-expanded="true"] { outline: 3px solid var(--fg); outline-offset: 3px; }
+.personas button[aria-expanded="true"]::after { transform: rotate(180deg); }
 .pick-hint { color: var(--muted); font-size: 16px; margin: -4px 0 16px; }
 .guide { border: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--panel)); border-radius: var(--radius); padding: 22px; }
 .guide:not([hidden]) { animation: guide-in .25s ease-out; }
 @keyframes guide-in { from { opacity: 0; } to { opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .guide:not([hidden]) { animation: none; } .personas button { transition: none; } }
-.personas button[data-persona="pro"]:hover { border-color: color-mix(in srgb, var(--blue) 55%, var(--line)); }
-.personas button[data-persona="pro"][aria-expanded="true"] { border-color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, var(--panel)); }
-.personas button[data-persona="pro"] .pick { color: var(--blue); }
+@media (prefers-reduced-motion: reduce) { .guide:not([hidden]) { animation: none; } .personas button, .personas button::after { transition: none; } }
 #guide-pro { border-color: var(--blue); background: color-mix(in srgb, var(--blue) 14%, var(--panel)); }
 #guide-pro .tag { background: color-mix(in srgb, var(--blue) 22%, transparent); color: var(--blue); }
 .shot { border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0, 0, 0, .25); }
