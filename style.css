@@ -161,12 +161,22 @@ figure.shot { margin-bottom: 0; }
 .gvideos { display: block; margin-top: 10px; }
 .gvideos .gvideo { margin: 0 0 34px; }
 .gvideo figcaption { font-size: 15px; }
-.vgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
-.vcard h3 { font-size: 17px; }
+/* the guides (videos): small cards, three to a row; a click opens the video large in the page */
+.vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.vcard h3 { font-size: 15px; }
+.vcard[data-video] { cursor: pointer; }
+.vbtn { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; aspect-ratio: 16 / 10; border-radius: var(--radius); }
+.vbtn img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); background: #000; transition: border-color .15s, filter .15s; }
+.vbtn .play { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; font-size: 17px; opacity: .92; box-shadow: 0 4px 14px rgba(0, 0, 0, .45); transition: transform .15s; }
+.vcard:hover .vbtn img { border-color: var(--accent); filter: brightness(1.08); }
+.vcard:hover .vbtn .play { transform: scale(1.1); }
+.vbtn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 860px) {
   .steps > li, .gsteps > li { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-bottom: 30px; }
-  .vgrid { grid-template-columns: minmax(0, 1fr); }
+  .vgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 }
+@media (max-width: 420px) { .vgrid { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .vbtn img, .vbtn .play { transition: none; } }
 
 /* Windows or Mac install steps */
 [hidden] { display: none !important; }

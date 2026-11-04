@@ -77,12 +77,13 @@
     $("#vgrid").innerHTML = videos.filter((v) => !vCat || v.category === vCat).map((v) => {
       const title = (v.title[lang] || v.title.en).replace(/</g, "&lt;");
       const tag = v.persona === "pro" ? (lang === "he" ? window.HE.p_pro_tag : "Professional design") : (lang === "he" ? window.HE.p_quick_tag : "Quick album");
+      // a video with a file: its picture and a play button; a click opens it large in the page (the lightbox below) and plays it at once
       const media = v.file
-        ? `<div class="vthumb vfile"><video controls preload="none" playsinline poster="media/${v.file}.webp"><source src="media/${v.file}.mp4" type="video/mp4"></video></div>`
+        ? `<button type="button" class="vbtn" aria-label="${t("v_play")}: ${title}"><img src="media/${v.file}.webp" alt="" width="1280" height="800" loading="lazy" decoding="async"><span class="play" aria-hidden="true">▶</span></button>`
         : v.youtube
         ? `<a class="ph vthumb" href="https://www.youtube-nocookie.com/embed/${v.youtube}" target="_blank" rel="noopener"><span class="play">▶</span></a>`
         : `<div class="ph vthumb" aria-hidden="true"><span class="play">▶</span><small>${t("v_soon")}</small></div>`;
-      return `<article class="vcard">${media}<h3>${title}</h3><p class="fine">${label(v.category)} · ${tag}</p></article>`;
+      return `<article class="vcard"${v.file ? ` data-video="${v.id}"` : ""}>${media}<h3>${title}</h3><p class="fine">${label(v.category)} · ${tag}</p></article>`;
     }).join("");
   }
 

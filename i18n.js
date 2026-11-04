@@ -66,7 +66,7 @@ window.HE = {
   q4_h: "4. מעצבים מחדש בלחיצה", q4_p: "מעצבים מחדש עמוד, כפולה או סיפור בלחיצה אחת, או לוחצים R.",
   q5_h: "5. מייצאים", q5_p: "מייצאים PDF להדפסת מבחן לעיון, או קבצים מוכנים להדפסה עבור בית הדפוס שלכם.",
   s2_v: "מעדיפים לצפות? <a href=\"#videos\" data-video=\"api-key\">יוצרים מפתח API של Claude</a> · <a href=\"#videos\" data-video=\"add-credit\">מוסיפים קרדיט ל-Claude</a>",
-  lb_close: "סגירה (Esc)", lb_prev: "הקודם", lb_next: "הבא",
+  lb_close: "סגירה (Esc)", lb_prev: "הקודם", lb_next: "הבא", v_play: "הפעלה",
   lr_dl: "הורדת התוסף ל-Lightroom", lr_dl_note: "קובץ zip קטן, ל-Lightroom Classic.",
   lr_s1: "פותחים את הקובץ. ב-Lightroom Classic בוחרים <b>File › Plug-in Manager… › Add</b> ובוחרים את התיקייה <b>AlbumDesigner.lrplugin</b>.",
   lr_s2: "בחלונית <b>Publish Services</b> לוחצים <b>Set Up…</b> ליד FlowAlbum וכותבים את שם האלבום. FlowAlbum צריך להיות פתוח.",
@@ -82,7 +82,7 @@ window.HE = {
   r6_h: "6. מבקשים מ-Claude", r6_p: "\"תגדיל את תמונת האגם בעמוד 5.\" Claude משנה את האלבום באמצעות אותם כלים שלכם: רווחים, רקעים, מסגרות, הזזה והחלפה של תמונות, ומכבד את הנעילות.",
   r9_h: "9. הדפסת מבחן והדפסה", r9_p: "שולחים הדפסת מבחן לשיתוף: דף אינטרנט שנפתח בכל דפדפן, ובו המשפחה והחברים כותבים הערות לכל עמוד. מייבאים את ההערות בחזרה לאלבום ומטפלים בהן. לבסוף, מייצאים קבצים מוכנים להדפסה עבור בית הדפוס שלכם.",
   guide_video_soon: "מדריך וידאו: בקרוב",
-  v_h: "מרכז ידע", v_lead: "סרטוני הדרכה קצרים, אחד לכל דבר שאפשר לעשות.", v_all: "הכול", v_soon: "בקרוב",
+  v_h: "מדריכים", v_lead: "סרטוני הדרכה קצרים, אחד לכל דבר שאפשר לעשות.", v_all: "הכול", v_soon: "בקרוב",
   c_Getting_started: "להתחיל", c_Photos: "תמונות", c_Tips: "טיפים", c_Claude: "Claude", c_Design: "עיצוב", c_Export: "ייצוא", c_Lightroom: "Lightroom",
   f_h: "ספרו לנו מה אתם חושבים", f_lead: "מצאתם באג, רוצים תכונה, או נתקעתם? כתבו כאן. זה מגיע ישירות למפתח.",
   f_type: "מה זה?", f_bug: "משהו שבור", f_feat: "רעיון", f_q: "שאלה",
@@ -101,7 +101,7 @@ window.HE = {
   v_released: "פורסם", v_beta: "בטא"
 };
 window.EN = {
-  lb_close: "Close (Esc)", lb_prev: "Previous", lb_next: "Next",
+  lb_close: "Close (Esc)", lb_prev: "Previous", lb_next: "Next", v_play: "Play",
   v_all: "All", v_soon: "Coming soon", f_ok: "Thanks, it's logged.", f_err: "Couldn't send that. Try again in a moment.",
   f_short: "Write at least a few words.", f_off: "The feedback box isn't switched on yet.", f_sending: "Sending…", v_released: "Released", v_beta: "beta"
 };
