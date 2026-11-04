@@ -200,10 +200,9 @@ figure.shot a { cursor: zoom-in; }
 html.lb-open { overflow: hidden; }
 @media (max-width: 520px) { .lb-close, .lb-nav { width: 40px; height: 40px; } .lb-cap { padding: 0 16px; } }
 
-/* Download and install: the video beside the first two steps */
-.install { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 34px; align-items: start; margin-top: 30px; }
-.install .gvideo { margin: 0; max-width: none; }
-@media (min-width: 861px) { .install .gvideo { position: sticky; top: 84px; } }     /* the video stays beside the steps while they are read */
-.isteps { list-style: none; margin: 0; padding: 0; }
-.isteps > li { margin: 0 0 26px; }
-@media (max-width: 860px) { .install { grid-template-columns: minmax(0, 1fr); } }
+/* Download and install: the video, and below it the first two steps side by side across the full width */
+.install { margin-top: 30px; }
+.install .gvideo { margin: 0 auto; max-width: 860px; }
+.isteps { list-style: none; margin: 34px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; align-items: start; }
+.isteps > li { margin: 0; }
+@media (max-width: 860px) { .isteps { grid-template-columns: minmax(0, 1fr); gap: 26px; } }
