@@ -55,6 +55,17 @@
   "file": "design-spreads"
  },
  {
+  "id": "page-size",
+  "category": "Design",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Choose your page size",
+   "he": "בוחרים את גודל הדפים"
+  },
+  "file": "page-size"
+ },
+ {
   "id": "ai-lock",
   "category": "Design",
   "persona": "pro",
@@ -64,6 +75,17 @@
    "he": "נעילה ל-AI: משאירים מה שהסתיים"
   },
   "file": "ai-lock"
+ },
+ {
+  "id": "art-background",
+  "category": "Design",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Art behind your pages and spreads",
+   "he": "רקע אמנותי לדפים ולכפולות"
+  },
+  "file": "art-background"
  },
  {
   "id": "edit-photo",
@@ -130,6 +152,17 @@
    "he": "מבקשים מ-Claude"
   },
   "file": "ask-claude"
+ },
+ {
+  "id": "claude-background",
+  "category": "Claude",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Ask Claude to draw a background",
+   "he": "מבקשים מ-Claude לצייר רקע"
+  },
+  "file": "claude-background"
  },
  {
   "id": "api-key",
