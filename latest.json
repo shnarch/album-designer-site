@@ -1,13 +1,16 @@
 {
- "version": "3.1.0",
- "released": "2026-11-03",
- "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.1.0/FlowAlbum-Setup-3.1.0.exe",
- "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.1.0/FlowAlbum-3.1.0-apple-silicon.dmg",
- "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.1.0/FlowAlbum-3.1.0-intel.dmg",
+ "version": "3.4.0",
+ "released": "2026-11-05",
+ "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.4.0/FlowAlbum-Setup-3.4.0.exe",
+ "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.4.0/FlowAlbum-3.4.0-apple-silicon.dmg",
+ "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.4.0/FlowAlbum-3.4.0-intel.dmg",
  "notes": [
-  "The app is now called FlowAlbum, with a new logo, the slogan \"Your stories, redesigned in a click\" and a new app icon",
-  "Photos is a screen of its own for organizing photos, with a Pages button that peeks at a story's pages, and a calm Design album strip with the split slider",
-  "A tag bar that floats above the photos you select: move it, resize it, and see each shortcut letter (Alternatives is now A)",
-  "Rename an album by double-clicking its name or with the pencil in All albums; its folder is renamed to match"
+  "Any page size and shape: portrait and landscape books, a list of book sizes, and the size shown beside the album name",
+  "Collage spreads, with photos across the fold",
+  "Background art for pages and spreads: 65 built-in backgrounds, your own pictures, or one Claude draws",
+  "Front and back: choose which overlapping photo, QR code or text is in front",
+  "Text on the cover works like text on the pages, with a Cover edit panel on the right",
+  "Export in two groups, Proof and Print, with pictures of the spreads for print providers whose own app takes pictures",
+  "A ? beside every Print setting, and an exact-measurements section"
  ]
 }
