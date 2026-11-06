@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FlowAlbum</title>
+<link rel="canonical" href="https://shnarch.github.io/flowalbum/">
+<!-- Leave a device out of the analytics: open the site once with ?noanalytics=1 on the end of the address (?noanalytics=0 turns counting back on). -->
+<script>
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search).get("noanalytics");
+      if (q === "1") localStorage.setItem("noanalytics", "1");
+      else if (q === "0") localStorage.removeItem("noanalytics");
+      if (localStorage.getItem("noanalytics") === "1") window["ga-disable-G-DE4DNNZV11"] = true;
+    } catch (e) {}
+  })();
+</script>
 <!-- Google Analytics (visits, and download clicks: see site.js). One Google tag per page. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DE4DNNZV11"></script>
 <script>
