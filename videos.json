@@ -55,6 +55,17 @@
   "file": "design-spreads"
  },
  {
+  "id": "redesign-click",
+  "category": "Design",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Redesign with a click",
+   "he": "עיצוב מחדש בקליק"
+  },
+  "file": "redesign-click"
+ },
+ {
   "id": "page-size",
   "category": "Design",
   "persona": "quick",
