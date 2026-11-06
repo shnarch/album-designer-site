@@ -39,6 +39,13 @@
     const notes = $("[data-notes]");
     if (notes && latest?.notes) notes.innerHTML = latest.notes.map((n) => `<li>${n.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]))}</li>`).join("");
   }
+  // a click on a download button is counted as a "download" event in Google Analytics (the buttons lead to GitHub, which Google cannot see)
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest?.("a[data-dl-windows], a[data-dl-mac], a[data-dl-mac-intel], a[href*='/releases/download/']");
+    if (!a || typeof gtag !== "function") return;
+    const platform = a.hasAttribute("data-dl-windows") ? "windows" : a.hasAttribute("data-dl-mac-intel") ? "mac_intel" : a.hasAttribute("data-dl-mac") ? "mac_apple_silicon" : "other";
+    gtag("event", "download", { platform, version: latest?.version || "", file_name: (a.href.split("/").pop() || "").slice(0, 80) });
+  });
   fetch("latest.json", { cache: "no-store" }).then((r) => r.json()).then((j) => { latest = j; renderVersion(); }).catch(() => {});
 
   // ------------------------------------------- Windows or Mac install steps ----
