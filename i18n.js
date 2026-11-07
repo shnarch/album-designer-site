@@ -66,7 +66,7 @@ window.HE = {
   q4_h: "4. מעצבים מחדש בלחיצה", q4_p: "מעצבים מחדש עמוד, כפולה או סיפור בלחיצה אחת, או לוחצים R.",
   q5_h: "5. מייצאים", q5_p: "מייצאים PDF להדפסת מבחן לעיון, או קבצים מוכנים להדפסה עבור בית הדפוס שלכם.",
   s2_v: "מעדיפים לצפות? <a href=\"#videos\" data-video=\"api-key\">יוצרים מפתח API של Claude</a> · <a href=\"#videos\" data-video=\"add-credit\">מוסיפים קרדיט ל-Claude</a>",
-  lb_close: "סגירה (Esc)", lb_prev: "הקודם", lb_next: "הבא", v_play: "הפעלה",
+  lb_close: "סגירה (Esc)", lb_copy: "העתקת קישור לסרטון", lb_copied: "הקישור הועתק ✓", lb_prev: "הקודם", lb_next: "הבא", v_play: "הפעלה",
   lr_dl: "הורדת התוסף ל-Lightroom", lr_dl_note: "קובץ zip קטן, ל-Lightroom Classic.",
   lr_s1: "פותחים את הקובץ. ב-Lightroom Classic בוחרים <b>File › Plug-in Manager… › Add</b> ובוחרים את התיקייה <b>AlbumDesigner.lrplugin</b>.",
   lr_s2: "בחלונית <b>Publish Services</b> לוחצים <b>Set Up…</b> ליד FlowAlbum וכותבים את שם האלבום. FlowAlbum צריך להיות פתוח.",
@@ -101,7 +101,7 @@ window.HE = {
   v_released: "פורסם", v_beta: "בטא"
 };
 window.EN = {
-  lb_close: "Close (Esc)", lb_prev: "Previous", lb_next: "Next", v_play: "Play",
+  lb_close: "Close (Esc)", lb_copy: "Copy link to this video", lb_copied: "Link copied ✓", lb_prev: "Previous", lb_next: "Next", v_play: "Play",
   v_all: "All", v_soon: "Coming soon", f_human: "Please tick \u201cVerify you are human\u201d, then send.", f_many: "That is a lot of messages for one hour. Try again later.", f_ok: "Thanks, it's logged.", f_err: "Couldn't send that. Try again in a moment.",
   f_short: "Write at least a few words.", f_off: "The feedback box isn't switched on yet.", f_sending: "Sending…", v_released: "Released", v_beta: "beta"
 };

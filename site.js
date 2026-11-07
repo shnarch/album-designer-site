@@ -74,7 +74,7 @@
   // Nothing in the address bar: the page always starts with both guides closed, until the visitor picks one.
 
   // -------------------------------------------------------------- videos ----
-  fetch("videos.json").then((r) => r.json()).then((j) => { videos = j; renderVideos(); }).catch(() => {});
+  fetch("videos.json").then((r) => r.json()).then((j) => { videos = j; renderVideos(); videoFromAddress(); }).catch(() => {});
   function renderVideos() {
     const cats = [...new Set(videos.map((v) => v.category))];
     const label = (c) => (lang === "he" ? window.HE["c_" + c.replace(/ /g, "_")] : null) || c;
@@ -100,10 +100,10 @@
   const lb = document.createElement("dialog");
   lb.className = "lightbox";
   lb.innerHTML = '<button type="button" class="lb-close" data-lb="close">✕</button><button type="button" class="lb-nav lb-prev" data-lb="prev">‹</button>' +
-    '<div class="lb-stage"></div><p class="lb-cap"></p><button type="button" class="lb-nav lb-next" data-lb="next">›</button>';
+    '<div class="lb-stage"></div><p class="lb-cap"></p><button type="button" class="lb-copy" data-lb="copy" hidden></button><button type="button" class="lb-nav lb-next" data-lb="next">›</button>';
   document.body.appendChild(lb);
-  let lbList = [], lbAt = 0;
-  const lbStage = lb.querySelector(".lb-stage"), lbCap = lb.querySelector(".lb-cap");
+  let lbList = [], lbAt = 0, lbVideoId = "";
+  const lbStage = lb.querySelector(".lb-stage"), lbCap = lb.querySelector(".lb-cap"), lbCopy = lb.querySelector(".lb-copy");
   function lbLabels(title) {
     lb.setAttribute("aria-label", title || "");
     lb.querySelector(".lb-close").setAttribute("aria-label", t("lb_close")); lb.querySelector(".lb-close").title = t("lb_close");
@@ -111,7 +111,7 @@
   }
   function lbOpen() { if (!lb.open) { lb.showModal(); document.documentElement.classList.add("lb-open"); } }
   function lbShow(i) {
-    lbAt = (i + lbList.length) % lbList.length;
+    lbAt = (i + lbList.length) % lbList.length; lbCopy.hidden = true;
     const a = lbList[lbAt], img = a.querySelector("img"), alt = (img && img.alt) || "";
     lbStage.innerHTML = ""; const big = document.createElement("img"); big.src = a.getAttribute("href"); big.alt = alt; lbStage.appendChild(big);
     lbCap.textContent = alt; lbLabels(alt);
@@ -124,11 +124,27 @@
     lbStage.innerHTML = `<video controls autoplay playsinline poster="media/${file}.webp"><source src="media/${file}.mp4" type="video/mp4"></video>`;
     lbCap.textContent = title; lbLabels(title);
     lb.querySelectorAll(".lb-nav").forEach((b) => (b.hidden = true));
+    lbVideoId = id; lbCopy.hidden = false; lbCopy.textContent = "🔗 " + t("lb_copy");
+    try { history.replaceState(null, "", "#video=" + encodeURIComponent(id)); } catch {}      // the address bar is now a link to this video
     lbOpen();
   }
-  lb.addEventListener("close", () => { lbStage.innerHTML = ""; document.documentElement.classList.remove("lb-open"); });   // also stops a playing video
+  // A link such as .../#video=photos-groups opens that video (and a visitor can copy the link from the window).
+  function videoFromAddress() {
+    const m = /^#video=([\w-]+)$/.exec(location.hash), v = m && videos.find((x) => x.id === m[1] && x.file);
+    if (v) lbVideo(v.id);
+  }
+  lb.addEventListener("close", () => {
+    if (lbVideoId) { try { history.replaceState(null, "", "#guides"); } catch {} lbVideoId = ""; }
+    lbStage.innerHTML = ""; document.documentElement.classList.remove("lb-open");
+  });   // also stops a playing video
   lb.addEventListener("click", (e) => {
     const b = e.target.closest("[data-lb]");
+    if (b && b.dataset.lb === "copy") {
+      const url = location.origin + location.pathname + "#video=" + encodeURIComponent(lbVideoId);
+      const done = () => { lbCopy.textContent = "🔗 " + t("lb_copied"); setTimeout(() => (lbCopy.textContent = "🔗 " + t("lb_copy")), 2000); };
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(done, () => { prompt(t("lb_copy"), url); });
+      return;
+    }
     if (b) { if (b.dataset.lb === "close") lb.close(); else lbShow(lbAt + (b.dataset.lb === "next" ? 1 : -1)); return; }
     if (e.target === lb || e.target.closest(".lb-stage img")) lb.close();       // the dark area or the picture itself
   });
