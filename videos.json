@@ -22,6 +22,17 @@
   "file": "import"
  },
  {
+  "id": "lightroom",
+  "category": "Getting started",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Publish from Lightroom Classic",
+   "he": "פרסום מ-Lightroom Classic"
+  },
+  "file": "lightroom"
+ },
+ {
   "id": "install-claude-key",
   "category": "Getting started",
   "persona": "quick",
@@ -218,17 +229,6 @@
    "he": "טבעת הקרדיט של Claude"
   },
   "file": "credit-ring"
- },
- {
-  "id": "lightroom",
-  "category": "Lightroom",
-  "persona": "pro",
-  "youtube": null,
-  "title": {
-   "en": "Publish from Lightroom Classic",
-   "he": "פרסום מ-Lightroom Classic"
-  },
-  "file": "lightroom"
  },
  {
   "id": "check-print",
