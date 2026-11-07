@@ -81,7 +81,7 @@
     $("#vfilters").innerHTML = [["", t("v_all")], ...cats.map((c) => [c, label(c)])]
       .map(([c, text]) => `<button type="button" aria-pressed="${vCat === c}" data-cat="${c}">${text}</button>`).join("");
     $$("#vfilters button").forEach((b) => b.addEventListener("click", () => { vCat = b.dataset.cat; renderVideos(); }));
-    $("#vgrid").innerHTML = videos.filter((v) => !vCat || v.category === vCat).map((v) => {
+    $("#vgrid").innerHTML = videos.filter((v) => !vCat || v.category === vCat || (v.also || []).includes(vCat)).map((v) => {
       const title = (v.title[lang] || v.title.en).replace(/</g, "&lt;");
       const tag = v.persona === "pro" ? (lang === "he" ? window.HE.p_pro_tag : "Professional design") : (lang === "he" ? window.HE.p_quick_tag : "Quick album");
       // a video with a file: its picture and a play button; a click opens it large in the page (the lightbox below) and plays it at once

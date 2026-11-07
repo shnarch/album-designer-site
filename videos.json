@@ -44,6 +44,17 @@
   "file": "install-claude-key"
  },
  {
+  "id": "hebrew-rtl",
+  "category": "Getting started",
+  "persona": "pro",
+  "youtube": null,
+  "title": {
+   "en": "Hebrew albums, right to left",
+   "he": "אלבומים בעברית: מימין לשמאל"
+  },
+  "file": "hebrew-rtl"
+ },
+ {
   "id": "photos-groups",
   "category": "Photos",
   "persona": "quick",
@@ -93,8 +104,8 @@
   "persona": "quick",
   "youtube": null,
   "title": {
-   "en": "Choose your page size",
-   "he": "בוחרים את גודל הדפים"
+   "en": "Choose and change your album size",
+   "he": "בוחרים ומשנים את גודל האלבום"
   },
   "file": "page-size"
  },
@@ -141,17 +152,6 @@
    "he": "מעצבים את הכריכה"
   },
   "file": "cover-text"
- },
- {
-  "id": "hebrew-rtl",
-  "category": "Design",
-  "persona": "pro",
-  "youtube": null,
-  "title": {
-   "en": "Hebrew albums, right to left",
-   "he": "אלבומים בעברית: מימין לשמאל"
-  },
-  "file": "hebrew-rtl"
  },
  {
   "id": "qr-video",
@@ -206,7 +206,10 @@
    "en": "Create a Claude API key",
    "he": "יוצרים מפתח API של Claude"
   },
-  "file": "api-key"
+  "file": "api-key",
+  "also": [
+   "Getting started"
+  ]
  },
  {
   "id": "add-credit",
