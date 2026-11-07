@@ -222,3 +222,8 @@ html.lb-open { overflow: hidden; }
 .lb-copy { border: 0; border-radius: 999px; padding: 8px 16px; background: rgba(255, 255, 255, .14); color: #fff; font: inherit; font-size: 14px; cursor: pointer; }
 .lb-copy:hover { background: rgba(255, 255, 255, .28); }
 .lb-copy:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.vmeta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.vlink { flex: none; border: 1px solid var(--line, #d8d5cc); border-radius: 999px; padding: 2px 9px; background: transparent; color: inherit; font-size: 13px; line-height: 1.4; cursor: pointer; }
+.vlink:hover { border-color: var(--accent); }
+.vlink:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }

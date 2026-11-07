@@ -90,7 +90,7 @@
         : v.youtube
         ? `<a class="ph vthumb" href="https://www.youtube-nocookie.com/embed/${v.youtube}" target="_blank" rel="noopener"><span class="play">▶</span></a>`
         : `<div class="ph vthumb" aria-hidden="true"><span class="play">▶</span><small>${t("v_soon")}</small></div>`;
-      return `<article class="vcard"${v.file ? ` data-video="${v.id}"` : ""}>${media}<p class="fine">${label(v.category)} · ${tag}</p></article>`;
+      return `<article class="vcard"${v.file ? ` data-video="${v.id}"` : ""}>${media}<p class="fine vmeta"><span>${label(v.category)} · ${tag}</span>${v.file ? `<button type="button" class="vlink" data-copy="${v.id}" title="${t("lb_copy")}" aria-label="${t("lb_copy")}: ${title}">🔗</button>` : ""}</p></article>`;
     }).join("");
   }
 
@@ -128,6 +128,10 @@
     try { history.replaceState(null, "", "#video=" + encodeURIComponent(id)); } catch {}      // the address bar is now a link to this video
     lbOpen();
   }
+  function copyVideoLink(id, done) {
+    const url = location.origin + location.pathname + "#video=" + encodeURIComponent(id);
+    (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(done, () => { prompt(t("lb_copy"), url); });
+  }
   // A link such as .../#video=photos-groups opens that video (and a visitor can copy the link from the window).
   function videoFromAddress() {
     const m = /^#video=([\w-]+)$/.exec(location.hash), v = m && videos.find((x) => x.id === m[1] && x.file);
@@ -140,9 +144,7 @@
   lb.addEventListener("click", (e) => {
     const b = e.target.closest("[data-lb]");
     if (b && b.dataset.lb === "copy") {
-      const url = location.origin + location.pathname + "#video=" + encodeURIComponent(lbVideoId);
-      const done = () => { lbCopy.textContent = "🔗 " + t("lb_copied"); setTimeout(() => (lbCopy.textContent = "🔗 " + t("lb_copy")), 2000); };
-      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(done, () => { prompt(t("lb_copy"), url); });
+      copyVideoLink(lbVideoId, () => { lbCopy.textContent = "🔗 " + t("lb_copied"); setTimeout(() => (lbCopy.textContent = "🔗 " + t("lb_copy")), 2000); });
       return;
     }
     if (b) { if (b.dataset.lb === "close") lb.close(); else lbShow(lbAt + (b.dataset.lb === "next" ? 1 : -1)); return; }
@@ -153,6 +155,12 @@
   });
   document.addEventListener("click", (e) => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;   // a new tab on purpose: let the browser do it
+    const cp = e.target.closest("[data-copy]");           // the 🔗 under a thumbnail: copy the link, don't play
+    if (cp) {
+      e.preventDefault(); e.stopPropagation();
+      copyVideoLink(cp.dataset.copy, () => { cp.textContent = "✓"; cp.title = t("lb_copied"); setTimeout(() => { cp.textContent = "🔗"; cp.title = t("lb_copy"); }, 2000); });
+      return;
+    }
     const vl = e.target.closest("[data-video]");
     if (vl) { e.preventDefault(); lbVideo(vl.dataset.video); return; }
     const shot = e.target.closest(".shot a");
