@@ -11,6 +11,17 @@
   "file": "intro"
  },
  {
+  "id": "import",
+  "category": "Getting started",
+  "persona": "quick",
+  "youtube": null,
+  "title": {
+   "en": "Bring your photos in",
+   "he": "הוספת תמונות"
+  },
+  "file": "import"
+ },
+ {
   "id": "install-claude-key",
   "category": "Getting started",
   "persona": "quick",
