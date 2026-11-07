@@ -183,7 +183,7 @@ figure.shot { margin-bottom: 0; }
 .os-switch button { background: var(--panel); color: var(--muted); border: 0; padding: 8px 22px; font: inherit; font-weight: 600; cursor: pointer; }
 .os-switch button[aria-selected="true"] { background: var(--accent); color: var(--accent-fg); }
 [data-os="win"] [data-for="mac"], [data-os="mac"] [data-for="win"] { display: none !important; }
-.whatsnew { margin: 18px 4px 6px; } .whatsnew h3 { margin: 0 0 6px; font-size: 1.02rem; } .whatsnew ul { margin: 0; padding-inline-start: 1.2em; color: var(--muted); } .whatsnew li { margin: 3px 0; }
+.whatsnew { margin-top: 12px; } .whatsnew ul { margin: 10px 0 0; padding-inline-start: 1.2em; color: var(--muted); } .whatsnew li { margin: 3px 0; }
 .dl-info { flex: 1 1 400px; } [data-released] { white-space: nowrap; } .dl-hint { margin: 8px 4px 0; }
 .steps code { word-break: break-all; font-size: 13px; background: color-mix(in srgb, var(--fg) 9%, transparent); padding: 1px 6px; border-radius: 5px; }
 .steps details { margin-top: 10px; }
