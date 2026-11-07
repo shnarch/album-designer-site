@@ -1,16 +1,17 @@
 {
- "version": "3.4.0",
- "released": "2026-11-05",
- "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.4.0/FlowAlbum-Setup-3.4.0.exe",
- "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.4.0/FlowAlbum-3.4.0-apple-silicon.dmg",
- "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.4.0/FlowAlbum-3.4.0-intel.dmg",
+ "version": "3.5.0",
+ "released": "2026-11-07",
+ "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.5.0/FlowAlbum-Setup-3.5.0.exe",
+ "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.5.0/FlowAlbum-3.5.0-apple-silicon.dmg",
+ "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.5.0/FlowAlbum-3.5.0-intel.dmg",
  "notes": [
-  "Any page size and shape: portrait and landscape books, a list of book sizes, and the size shown beside the album name",
-  "Collage spreads, with photos across the fold",
-  "Background art for pages and spreads: 65 built-in backgrounds, your own pictures, or one Claude draws",
-  "Front and back: choose which overlapping photo, QR code or text is in front",
-  "Text on the cover works like text on the pages, with a Cover edit panel on the right",
-  "Export in two groups, Proof and Print, with pictures of the spreads for print providers whose own app takes pictures",
-  "A ? beside every Print setting, and an exact-measurements section"
+  "Guide videos inside the app: the chat suggests short videos for the step you are on, and a books icon beside ? lists them all",
+  "Add photos by dragging in zip files or whole folders, or from the Import button's menu",
+  "Split photos into stories by where they were taken, by time, or both, when your photos carry GPS positions",
+  "Preview album: flip through the whole album full screen, with the real printed size and buttons to move between spreads",
+  "Design history that keeps your designs when photos change, and a comparison of a spread with and without a photo",
+  "Redesign stays inside the pages you selected",
+  "A new album opens on Photos with a getting-started box",
+  "Fixes: splitting a story, and menus hidden under the print guides"
  ]
 }
