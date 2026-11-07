@@ -1,17 +1,11 @@
 {
- "version": "3.5.0",
+ "version": "3.6.0",
  "released": "2026-11-07",
- "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.5.0/FlowAlbum-Setup-3.5.0.exe",
- "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.5.0/FlowAlbum-3.5.0-apple-silicon.dmg",
- "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.5.0/FlowAlbum-3.5.0-intel.dmg",
+ "windows": "https://github.com/shnarch/flowalbum/releases/download/v3.6.0/FlowAlbum-Setup-3.6.0.exe",
+ "mac": "https://github.com/shnarch/flowalbum/releases/download/v3.6.0/FlowAlbum-3.6.0-apple-silicon.dmg",
+ "mac_intel": "https://github.com/shnarch/flowalbum/releases/download/v3.6.0/FlowAlbum-3.6.0-intel.dmg",
  "notes": [
-  "Guide videos inside the app: the chat suggests short videos for the step you are on, and a books icon beside ? lists them all",
-  "Add photos by dragging in zip files or whole folders, or from the Import button's menu",
-  "Split photos into stories by where they were taken, by time, or both, when your photos carry GPS positions",
-  "Preview album: flip through the whole album full screen, with the real printed size and buttons to move between spreads",
-  "Design history that keeps your designs when photos change, and a comparison of a spread with and without a photo",
-  "Redesign stays inside the pages you selected",
-  "A new album opens on Photos with a getting-started box",
-  "Fixes: splitting a story, and menus hidden under the print guides"
+  "iPhone photos (HEIC): drag them in, use Import, or put them in a zip or folder. They are turned into high-quality pictures on the way in, with their date, place and colours kept",
+  "A clearer note when a new version is out: it links to the download and the list of what's new, and closes with a ✕"
  ]
 }
